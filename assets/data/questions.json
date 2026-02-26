@@ -1,0 +1,1922 @@
+{
+  "Fire Safety": [
+    {
+      "id": 1,
+      "question_en": "When does a fire involve paper, wood, or cloth (Class A fire), which extinguisher should be used?",
+      "question_mr": "पेपर, लाकूड किंवा कपडा यांसारख्या वस्तूंना लागलेल्या (Class A) आगीसाठी कोणता अग्निशामक वापरावा?",
+      "options_en": [
+        "Water",
+        "Sand",
+        "CO2",
+        "Foam"
+      ],
+      "options_mr": [
+        "पाणी",
+        "वाळू",
+        "CO₂",
+        "फोम"
+      ],
+      "correct": 0,
+      "points": 100
+    },
+    {
+      "id": 2,
+      "question_en": "If you see a fire starting, what should be the first action you take to alert everyone?",
+      "question_mr": "तुम्हाला कंपनीमध्ये  आग दिसली तर सर्वांना सावध करण्यासाठी तुम्ही सर्वात पहिले काय करावे?",
+      "options_en": [
+        "Run away",
+        "Raise alarm",
+        "Call friend",
+        "Hide"
+      ],
+      "options_mr": [
+        "पळून जाणे",
+        "अलार्म वाजवणे",
+        "मित्राला फोन करणे",
+        "लपणे"
+      ],
+      "correct": 0,
+      "points": 100
+    },
+    {
+      "id": 3,
+      "question_en": "A fire needs three things to burn. Which three things make up the fire triangle?",
+      "question_mr": "आग लागण्यासाठी तीन गोष्टी लागतात. आग त्रिकोणात कोणत्या तीन गोष्टी असतात?",
+      "options_en": [
+        "Heat, fuel, oxygen",
+        "Water, fuel, gas",
+        "Air, heat, dust",
+        "Heat only"
+      ],
+      "options_mr": [
+        "उष्णता, इंधन, ऑक्सिजन",
+        "पाणी, इंधन, वायू",
+        "हवा, उष्णता, धूळ",
+        "फक्त उष्णता"
+      ],
+      "correct": 0,
+      "points": 100
+    },
+    {
+      "id": 4,
+      "question_en": "During a fire emergency, what is the safest way for employees to exit the building?",
+      "question_mr": "आगीच्या वेळी इमारत सुरक्षितपणे सोडण्यासाठी कोणता मार्ग सर्वात सुरक्षित आहे?",
+      "options_en": [
+        "Use lift",
+        "Use staircase",
+        "Break windows",
+        "Wait"
+      ],
+      "options_mr": [
+        "लिफ्ट वापरणे",
+        "जिना (staircase) वापरणे",
+        "खिडक्या फोडणे",
+        "थांबून राहणे"
+      ],
+      "correct": 0,
+      "points": 100
+    },
+    {
+      "id": 5,
+      "question_en": "In case of electrical fire, which fire extinguisher to be used",
+      "question_mr": "विद्युत आगीच्या वेळी कोणता अग्निशामक वापरावा?",
+      "options_en": [
+        "Water type",
+        "Co2 type",
+        "DCP type",
+        "Foam type"
+      ],
+      "options_mr": [
+        "पाणी प्रकार (Water type)",
+        "CO₂ प्रकार (Co2 type)",
+        "DCP प्रकार (Dry Chemical Powder)",
+        "फोम प्रकार (Foam type)"
+      ],
+      "correct": 0,
+      "points": 100
+    },
+    {
+      "id": 6,
+      "question_en": "After evacuation, where should employees gather safely?",
+      "question_mr": "आग लागल्यावर किंवा आपत्कालीन परिस्थितीत बाहेर पडल्यावर कर्मचारी कुठे जमा व्हावेत?",
+      "options_en": [
+        "Eating spot",
+        "Meeting place during emergencies",
+        "Parking",
+        "Rest area"
+      ],
+      "options_mr": [
+        "जेवणाच्या जागी",
+        "आपत्कालीन एकत्रिकरण स्थळावर (Assembly Point)",
+        "पार्किंगमध्ये",
+        "विश्रांती स्थळावर"
+      ],
+      "correct": 0,
+      "points": 100
+    },
+    {
+      "id": 7,
+      "question_en": "Magnesium, aluminum are classified as which class of fire?",
+      "question_mr": "मॅग्नेशियम, अ‍ॅल्युमिनियम कोणत्या वर्गातील आगीत मोडतात?",
+      "options_en": [
+        "Class B",
+        "Class D",
+        "Class A",
+        "Class C."
+      ],
+      "options_mr": [
+        "क्लास B",
+        "क्लास D",
+        "क्लास A",
+        "क्लास C"
+      ],
+      "correct": 0,
+      "points": 100
+    },
+    {
+      "id": 8,
+      "question_en": "Why do companies conduct fire drills regularly?",
+      "question_mr": "कंपनीमध्ये फायर ड्रिल का केल्या जातात? त्याचा उद्देश काय असतो?",
+      "options_en": [
+        "Training",
+        "Fun",
+        "Noise",
+        "Inspection"
+      ],
+      "options_mr": [
+        "प्रशिक्षणासाठी",
+        "मजेसाठी",
+        "आवाज करण्यासाठी",
+        "तपासणीसाठी"
+      ],
+      "correct": 0,
+      "points": 100
+    },
+    {
+      "id": 9,
+      "question_en": "Before using a fire extinguisher, what should you check to ensure it works?",
+      "question_mr": "फायर एक्स्टिंग्विशर वापरण्यापूर्वी तुम्ही त्यात काय तपासले पाहिजे?",
+      "options_en": [
+        "Check pressure",
+        "Kick it",
+        "Throw it",
+        "Shake hard"
+      ],
+      "options_mr": [
+        "प्रेशर (दाब) तपासणे",
+        "लाथ मारणे",
+        "फेकून पाहणे",
+        "जोरात हलवणे"
+      ],
+      "correct": 0,
+      "points": 100
+    },
+    {
+      "id": 10,
+      "question_en": "What is the most common reason fires start in workplaces?",
+      "question_mr": "कंपनीमध्ये  आग लागण्याचे प्रमुख कारण कोणते मानले जाते?",
+      "options_en": [
+        "Unsafe acts",
+        "Rain",
+        "Cold",
+        "Food"
+      ],
+      "options_mr": [
+        "असुरक्षित कृती (Unsafe acts)",
+        "पाऊस",
+        "थंडी",
+        "अन्न"
+      ],
+      "correct": 0,
+      "points": 100
+    }
+  ],
+  "Electrical Safety": [
+    {
+      "id": 1,
+      "question_en": "What should you do before working on electrical equipment?",
+      "question_mr": "विद्युत उपकरणांवर काम करण्यापूर्वी तुम्ही काय केले पाहिजे?",
+      "options_en": [
+        "Switch off & isolate",
+        "Touch wires",
+        "Wet hands",
+        "Ignore"
+      ],
+      "options_mr": [
+        "स्विच ऑफ करून उपकरण वेगळे करणे",
+        "वायर्स हाताळणे",
+        "ओले हात ठेवणे",
+        "दुर्लक्ष करणे"
+      ],
+      "correct": 0,
+      "points": 100
+    },
+    {
+      "id": 2,
+      "question_en": "Insulation prevents?",
+      "question_mr": "इन्सुलेशनमुळे कोणापासून बचाव होतो?",
+      "options_en": [
+        "Shock",
+        "Noise",
+        "Dust",
+        "Heat"
+      ],
+      "options_mr": [
+        "विद्युत धक्का",
+        "आवाज",
+        "धूळ",
+        "उष्णता"
+      ],
+      "correct": 0,
+      "points": 100
+    },
+    {
+      "id": 3,
+      "question_en": "Which PPE for electrical work?",
+      "question_mr": "विद्युत कामासाठी कोणते PPE वापरावे?",
+      "options_en": [
+        "Rubber gloves",
+        "Metal gloves",
+        "Plastic shoes",
+        "None"
+      ],
+      "options_mr": [
+        "रबरचे हातमोजे",
+        "मेटलचे हातमोजे",
+        "प्लास्टिकचे बूट",
+        "काहीही नाही"
+      ],
+      "correct": 0,
+      "points": 100
+    },
+    {
+      "id": 4,
+      "question_en": "Overloading sockets cause?",
+      "question_mr": "सॉकेटमध्ये ओव्हरलोडिंग केल्यास काय होऊ शकते?",
+      "options_en": [
+        "Fire risk",
+        "Cooling",
+        "Safety",
+        "None"
+      ],
+      "options_mr": [
+        "आगीचा धोका",
+        "थंडावा",
+        "सुरक्षा",
+        "काहीही नाही"
+      ],
+      "correct": 0,
+      "points": 100
+    },
+    {
+      "id": 5,
+      "question_en": "Lockout needed for?",
+      "question_mr": "Lockout कोणत्या कारणासाठी आवश्यक असते?",
+      "options_en": [
+        "Control power",
+        "Speed up work",
+        "Decoration",
+        "None"
+      ],
+      "options_mr": [
+        "वीज नियंत्रणासाठी",
+        "काम लवकर करण्यासाठी",
+        "सजावटीसाठी",
+        "काहीही नाही"
+      ],
+      "correct": 0,
+      "points": 100
+    },
+    {
+      "id": 6,
+      "question_en": "Damaged cable should be?",
+      "question_mr": "तुटलेली",
+      "options_en": [
+        "Used",
+        "Ignored",
+        "Replaced",
+        "Hidden"
+      ],
+      "options_mr": [
+        "वापरावी",
+        "दुर्लक्ष करावे",
+        "बदलावी",
+        "लपवावी"
+      ],
+      "correct": 0,
+      "points": 100
+    },
+    {
+      "id": 7,
+      "question_en": "Water near electricity?",
+      "question_mr": "वीजजवळ पाणी असणे कसे आहे?",
+      "options_en": [
+        "Safe",
+        "Dangerous",
+        "Normal",
+        "Good"
+      ],
+      "options_mr": [
+        "सुरक्षित",
+        "धोकादायक",
+        "सामान्य",
+        "चांगले"
+      ],
+      "correct": 0,
+      "points": 100
+    },
+    {
+      "id": 8,
+      "question_en": "Circuit breaker does?",
+      "question_mr": "सर्किट ब्रेकर काय करतो?",
+      "options_en": [
+        "Protect from overload",
+        "Increase voltage",
+        "Decorate",
+        "None"
+      ],
+      "options_mr": [
+        "ओव्हरलोडपासून संरक्षण करतो",
+        "व्होल्टेज वाढवतो",
+        "सजावट करतो",
+        "काहीही नाही"
+      ],
+      "correct": 0,
+      "points": 100
+    },
+    {
+      "id": 9,
+      "question_en": "Loose wires cause?",
+      "question_mr": "सैल वायर्समुळे काय होऊ शकते?",
+      "options_en": [
+        "Safety",
+        "Shock hazard",
+        "Cooling",
+        "None"
+      ],
+      "options_mr": [
+        "सुरक्षा वाढते",
+        "विद्युत धक्क्याचा धोका",
+        "थंडावा",
+        "काहीही नाही"
+      ],
+      "correct": 0,
+      "points": 100
+    },
+    {
+      "id": 10,
+      "question_en": "Electrical panel access?",
+      "question_mr": "इलेक्ट्रिकल पॅनेलला प्रवेश कसा असावा?",
+      "options_en": [
+        "Blocked",
+        "Free access",
+        "Locked always",
+        "Hidden"
+      ],
+      "options_mr": [
+        "अडकलेला",
+        "मुक्त प्रवेश",
+        "नेहमी लॉक केलेला",
+        "लपवलेला"
+      ],
+      "correct": 0,
+      "points": 100
+    }
+  ],
+  "Road Safety": [
+    {
+      "id": 1,
+      "question_en": "When should a seatbelt be worn while driving?",
+      "question_mr": "वाहन चालवताना सीटबेल्ट कधी लावावा?",
+      "options_en": [
+        "Always",
+        "Never",
+        "Sometimes",
+        "Only during long trips"
+      ],
+      "options_mr": [
+        "नेहमी",
+        "कधीच नाही",
+        "कधी कधी",
+        "फक्त लांब प्रवासात"
+      ],
+      "correct": 0,
+      "points": 100
+    },
+    {
+      "id": 2,
+      "question_en": "Why are speed limits provided on the road?",
+      "question_mr": "रस्त्यावर स्पीड लिमिट्स का दिलेले असतात?",
+      "options_en": [
+        "Safety",
+        "Style",
+        "Fun",
+        "None"
+      ],
+      "options_mr": [
+        "सुरक्षेसाठी",
+        "स्टाईलसाठी",
+        "मजेसाठी",
+        "काहीही नाही"
+      ],
+      "correct": 0,
+      "points": 100
+    },
+    {
+      "id": 3,
+      "question_en": "What part of the body does a helmet protect?",
+      "question_mr": "हेल्मेट शरीराच्या कोणत्या भागाचे संरक्षण करते?",
+      "options_en": [
+        "Head",
+        "Leg",
+        "Hand",
+        "None"
+      ],
+      "options_mr": [
+        "डोके",
+        "पाय",
+        "हात",
+        "काहीही नाही"
+      ],
+      "correct": 0,
+      "points": 100
+    },
+    {
+      "id": 4,
+      "question_en": "What does a red traffic signal indicate?",
+      "question_mr": "लाल ट्रॅफिक सिग्नलचा अर्थ काय असतो?",
+      "options_en": [
+        "Go",
+        "Stop",
+        "Walk",
+        "Reverse"
+      ],
+      "options_mr": [
+        "जावे",
+        "थांबा",
+        "चाला",
+        "रिव्हर्स करा"
+      ],
+      "correct": 0,
+      "points": 100
+    },
+    {
+      "id": 5,
+      "question_en": "How is driving under the influence of alcohol considered?",
+      "question_mr": "दारू पिऊन वाहन चालवणे कसे मानले जाते?",
+      "options_en": [
+        "Safe",
+        "Illegal",
+        "Normal",
+        "Fun"
+      ],
+      "options_mr": [
+        "सुरक्षित",
+        "बेकायदेशीर",
+        "सामान्य",
+        "मजा"
+      ],
+      "correct": 0,
+      "points": 100
+    },
+    {
+      "id": 6,
+      "question_en": "What is the rule about using a mobile phone while driving?",
+      "question_mr": "वाहन चालवताना मोबाइल वापरण्याबाबत काय नियम आहे?",
+      "options_en": [
+        "Allowed",
+        "Not allowed",
+        "Sometimes",
+        "Only for texting"
+      ],
+      "options_mr": [
+        "परवानगी आहे",
+        "परवानगी नाही",
+        "कधी कधी",
+        "फक्त मेसेज करण्यासाठी"
+      ],
+      "correct": 0,
+      "points": 100
+    },
+    {
+      "id": 7,
+      "question_en": "What is the main purpose of a pedestrian crossing?",
+      "question_mr": "पादचारी क्रॉसिंगचा मुख्य उद्देश काय आहे?",
+      "options_en": [
+        "Safe passage",
+        "Parking",
+        "Stopping",
+        "Decoration"
+      ],
+      "options_mr": [
+        "सुरक्षित मार्ग",
+        "पार्किंग",
+        "थांबणे",
+        "सजावट"
+      ],
+      "correct": 0,
+      "points": 100
+    },
+    {
+      "id": 8,
+      "question_en": "What can over-speeding lead to?",
+      "question_mr": "जास्त वेगाने वाहन चालवल्यामुळे काय होऊ शकते?",
+      "options_en": [
+        "Accidents",
+        "Safety",
+        "Fuel saving",
+        "Peace"
+      ],
+      "options_mr": [
+        "अपघात",
+        "सुरक्षा",
+        "इंधन बचत",
+        "शांती"
+      ],
+      "correct": 0,
+      "points": 100
+    },
+    {
+      "id": 9,
+      "question_en": "Why is the condition of vehicle tyres important?",
+      "question_mr": "वाहनाच्या टायरची स्थिती महत्त्वाची का असते?",
+      "options_en": [
+        "Safety",
+        "Sound",
+        "Look",
+        "None"
+      ],
+      "options_mr": [
+        "सुरक्षेसाठी",
+        "आवाजासाठी",
+        "देखाव्यासाठी",
+        "काहीही नाही"
+      ],
+      "correct": 0,
+      "points": 100
+    },
+    {
+      "id": 10,
+      "question_en": "What are vehicle indicators used for?",
+      "question_mr": "वाहनाचे इंडिकेटर कशासाठी वापरले जातात?",
+      "options_en": [
+        "Direction",
+        "Speed",
+        "Noise",
+        "None"
+      ],
+      "options_mr": [
+        "दिशा दाखवण्यासाठी",
+        "वेगासाठी",
+        "आवाजासाठी",
+        "काहीही नाही"
+      ],
+      "correct": 0,
+      "points": 100
+    }
+  ],
+  "Lockout Tagout": [
+    {
+      "id": 1,
+      "question_en": "What is the purpose of using LOTO (Lockout Tagout) during equipment maintenance?",
+      "question_mr": "उपकरणांच्या मेंटेनन्सदरम्यान LOTO (Lockout Tagout) का वापरले जाते?",
+      "options_en": [
+        "Energy isolation",
+        "Decoration",
+        "Speed",
+        "Cleaning"
+      ],
+      "options_mr": [
+        "ऊर्जेचे विलगीकरण",
+        "सजावट",
+        "वेग वाढवणे",
+        "स्वच्छता"
+      ],
+      "correct": 0,
+      "points": 100
+    },
+    {
+      "id": 2,
+      "question_en": "What does Tagout mean in LOTO procedure?",
+      "question_mr": "LOTO प्रक्रियेत Tagout म्हणजे काय?",
+      "options_en": [
+        "Label warning",
+        "Fix equipment",
+        "Paint",
+        "None"
+      ],
+      "options_mr": [
+        "इशारा लेबल लावणे",
+        "उपकरण दुरुस्त करणे",
+        "रंग करणे",
+        "काहीही नाही"
+      ],
+      "correct": 0,
+      "points": 100
+    },
+    {
+      "id": 3,
+      "question_en": "What must be done before starting any maintenance work?",
+      "question_mr": "कोणतेही मेंटेनन्स काम सुरू करण्यापूर्वी काय केले पाहिजे?",
+      "options_en": [
+        "Isolate energy",
+        "Start machine",
+        "Ignore",
+        "Rush"
+      ],
+      "options_mr": [
+        "ऊर्जा विलग करणे",
+        "मशीन सुरू करणे",
+        "दुर्लक्ष करणे",
+        "घाई करणे"
+      ],
+      "correct": 0,
+      "points": 100
+    },
+    {
+      "id": 4,
+      "question_en": "Who is authorized to remove a LOTO lock?",
+      "question_mr": "LOTO लॉक कोण काढू शकतो?",
+      "options_en": [
+        "Authorized person",
+        "Anyone",
+        "Visitors",
+        "None"
+      ],
+      "options_mr": [
+        "प्रमाणित व्यक्ती",
+        "कोणीही",
+        "भेट देणारे",
+        "काहीही नाही"
+      ],
+      "correct": 0,
+      "points": 100
+    },
+    {
+      "id": 5,
+      "question_en": "What does LOTO prevent during maintenance work?",
+      "question_mr": "मेंटेनन्स दरम्यान LOTO कोणत्या गोष्टीपासून बचाव करते?",
+      "options_en": [
+        "Unexpected startup",
+        "Cleaning",
+        "Decoration",
+        "None"
+      ],
+      "options_mr": [
+        "अनपेक्षित सुरूवात",
+        "स्वच्छता",
+        "सजावट",
+        "काहीही नाही"
+      ],
+      "correct": 0,
+      "points": 100
+    },
+    {
+      "id": 6,
+      "question_en": "Who should keep the LOTO key?",
+      "question_mr": "LOTO ची किल्ली कोणाकडे ठेवली पाहिजे?",
+      "options_en": [
+        "Authorized person",
+        "Everyone",
+        "Open area",
+        "Random"
+      ],
+      "options_mr": [
+        "प्रमाणित व्यक्ती",
+        "सर्वांकडे",
+        "उघड्या ठिकाणी",
+        "कोणाकडेही"
+      ],
+      "correct": 0,
+      "points": 100
+    },
+    {
+      "id": 7,
+      "question_en": "When is Group LOTO required?",
+      "question_mr": "Group LOTO कधी आवश्यक असते?",
+      "options_en": [
+        "Multiple workers",
+        "One worker",
+        "Visitors",
+        "None"
+      ],
+      "options_mr": [
+        "अनेक कामगार असतील तेव्हा",
+        "फक्त एक कामगार असेल तेव्हा",
+        "भेट देणारे",
+        "काहीही नाही"
+      ],
+      "correct": 0,
+      "points": 100
+    },
+    {
+      "id": 8,
+      "question_en": "What types of energy can LOTO isolate?",
+      "question_mr": "LOTO कोणत्या प्रकारच्या ऊर्जेचे विलगीकरण करू शकते?",
+      "options_en": [
+        "Electrical only",
+        "Multiple",
+        "Air only",
+        "Heat only"
+      ],
+      "options_mr": [
+        "फक्त विद्युत ऊर्जा",
+        "अनेक प्रकारच्या ऊर्जा",
+        "फक्त हवा",
+        "फक्त उष्णता"
+      ],
+      "correct": 0,
+      "points": 100
+    },
+    {
+      "id": 9,
+      "question_en": "What does the Try‑out step mean in LOTO?",
+      "question_mr": "LOTO मधील Try‑out स्टेप म्हणजे काय?",
+      "options_en": [
+        "Verify isolation",
+        "Start machine",
+        "Paint",
+        "None"
+      ],
+      "options_mr": [
+        "ऊर्जा विलगीकरण तपासणे",
+        "मशीन सुरू करणे",
+        "रंग करणे",
+        "काहीही नाही"
+      ],
+      "correct": 0,
+      "points": 100
+    },
+    {
+      "id": 10,
+      "question_en": "What does the color tag in LOTO indicate?",
+      "question_mr": "LOTO मधील रंगीत टॅग काय दर्शवतो?",
+      "options_en": [
+        "Warning",
+        "Fun",
+        "Design",
+        "None"
+      ],
+      "options_mr": [
+        "इशारा",
+        "मजा",
+        "डिझाईन",
+        "काहीही नाही"
+      ],
+      "correct": 0,
+      "points": 100
+    }
+  ],
+  "Material Handling": [
+    {
+      "id": 1,
+      "question_en": "How should a load be lifted safely?",
+      "question_mr": "भार सुरक्षितरीत्या कसा उचलावा?",
+      "options_en": [
+        "Legs",
+        "Back",
+        "Neck",
+        "Arms only"
+      ],
+      "options_mr": [
+        "पायांचा उपयोग करून",
+        "पाठ वापरून",
+        "मान वापरून",
+        "फक्त हातांनी"
+      ],
+      "correct": 0,
+      "points": 100
+    },
+    {
+      "id": 2,
+      "question_en": "What can overloading lead to?",
+      "question_mr": "जास्त वजन उचलल्यास काय होऊ शकते?",
+      "options_en": [
+        "Injury",
+        "Strength",
+        "Growth",
+        "None"
+      ],
+      "options_mr": [
+        "इजा",
+        "शक्ती वाढणे",
+        "वाढ",
+        "काहीही नाही"
+      ],
+      "correct": 0,
+      "points": 100
+    },
+    {
+      "id": 3,
+      "question_en": "What should a trolley be used for?",
+      "question_mr": "ट्रॉली कशासाठी वापरली पाहिजे?",
+      "options_en": [
+        "Heavy items",
+        "Light items",
+        "Decoration",
+        "None"
+      ],
+      "options_mr": [
+        "जड वस्तू",
+        "हलक्या वस्तू",
+        "सजावट",
+        "काहीही नाही"
+      ],
+      "correct": 0,
+      "points": 100
+    },
+    {
+      "id": 4,
+      "question_en": "What PPE should be used while handling materials?",
+      "question_mr": "मटेरियल हाताळताना कोणते PPE वापरावे?",
+      "options_en": [
+        "Gloves",
+        "Tie",
+        "Scarf",
+        "None"
+      ],
+      "options_mr": [
+        "हातमोजे",
+        "टाय",
+        "स्कार्फ",
+        "काहीही नाही"
+      ],
+      "correct": 0,
+      "points": 100
+    },
+    {
+      "id": 5,
+      "question_en": "How should materials be stacked?",
+      "question_mr": "वस्तूंची रचणी कशी असावी?",
+      "options_en": [
+        "Stable",
+        "Random",
+        "Weak",
+        "Loose"
+      ],
+      "options_mr": [
+        "स्थिर",
+        "अनियमित",
+        "कमजोर",
+        "सैल"
+      ],
+      "correct": 0,
+      "points": 100
+    },
+    {
+      "id": 6,
+      "question_en": "Is a clear path required during material handling?",
+      "question_mr": "मटेरियल हाताळणीदरम्यान स्वच्छ मार्ग आवश्यक आहे का?",
+      "options_en": [
+        "Yes",
+        "No",
+        "Maybe",
+        "Never"
+      ],
+      "options_mr": [
+        "होय",
+        "नाही",
+        "कदाचित",
+        "कधीच नाही"
+      ],
+      "correct": 0,
+      "points": 100
+    },
+    {
+      "id": 7,
+      "question_en": "What do mechanical aids help reduce?",
+      "question_mr": "यांत्रिक साधने कोणती समस्या कमी करतात?",
+      "options_en": [
+        "Strain",
+        "Speed",
+        "Safety",
+        "None"
+      ],
+      "options_mr": [
+        "ताण",
+        "वेग",
+        "सुरक्षा",
+        "काहीही नाही"
+      ],
+      "correct": 0,
+      "points": 100
+    },
+    {
+      "id": 8,
+      "question_en": "How close should a load be kept to the body while lifting?",
+      "question_mr": "भार उचलताना शरीराच्या किती जवळ ठेवावा?",
+      "options_en": [
+        "Body",
+        "Far",
+        "High",
+        "Random"
+      ],
+      "options_mr": [
+        "शरीराजवळ",
+        "लांब",
+        "उंच",
+        "कुठेही"
+      ],
+      "correct": 0,
+      "points": 100
+    },
+    {
+      "id": 9,
+      "question_en": "When is team lifting required?",
+      "question_mr": "टीम लिफ्टिंग कधी आवश्यक असते?",
+      "options_en": [
+        "Heavy loads",
+        "Light loads",
+        "Small items",
+        "None"
+      ],
+      "options_mr": [
+        "जड भार",
+        "हलका भार",
+        "लहान वस्तू",
+        "काहीही नाही"
+      ],
+      "correct": 0,
+      "points": 100
+    },
+    {
+      "id": 10,
+      "question_en": "What can unsafe material handling cause?",
+      "question_mr": "असुरक्षित मटेरियल हाताळणीमुळे काय होऊ शकते?",
+      "options_en": [
+        "Injury",
+        "Fun",
+        "Comfort",
+        "None"
+      ],
+      "options_mr": [
+        "इजा",
+        "मजा",
+        "सोय",
+        "काहीही नाही"
+      ],
+      "correct": 0,
+      "points": 100
+    }
+  ],
+  "Working at Height": [
+    {
+      "id": 1,
+      "question_en": "At what minimum height should a safety harness be used?",
+      "question_mr": "किमान किती उंचीवर सेफ्टी हार्नेस वापरावा?",
+      "options_en": [
+        "2m",
+        "10m",
+        "1m",
+        "No need"
+      ],
+      "options_mr": [
+        "२ मीटर",
+        "१० मीटर",
+        "१ मीटर",
+        "गरज नाही"
+      ],
+      "correct": 0,
+      "points": 100
+    },
+    {
+      "id": 2,
+      "question_en": "What are guardrails used for when working at height?",
+      "question_mr": "उंचीवर काम करताना गार्डरेल्स कशासाठी वापरले जातात?",
+      "options_en": [
+        "Fall prevention",
+        "Decoration",
+        "Noise",
+        "None"
+      ],
+      "options_mr": [
+        "पडणे टाळण्यासाठी",
+        "सजावट",
+        "आवाजासाठी",
+        "काहीही नाही"
+      ],
+      "correct": 0,
+      "points": 100
+    },
+    {
+      "id": 3,
+      "question_en": "What should be checked on a ladder before use?",
+      "question_mr": "शिडी वापरण्यापूर्वी कोणती गोष्ट तपासली पाहिजे?",
+      "options_en": [
+        "Damage",
+        "Color",
+        "Brand",
+        "None"
+      ],
+      "options_mr": [
+        "नुकसान",
+        "रंग",
+        "ब्रँड",
+        "काहीही नाही"
+      ],
+      "correct": 0,
+      "points": 100
+    },
+    {
+      "id": 4,
+      "question_en": "What should a tie‑off point be while working at height?",
+      "question_mr": "उंचीवर काम करताना टाय‑ऑफ पॉईंट कसा असावा?",
+      "options_en": [
+        "Strong",
+        "Weak",
+        "Loose",
+        "Random"
+      ],
+      "options_mr": [
+        "मजबूत",
+        "कमजोर",
+        "सैल",
+        "कोणताही"
+      ],
+      "correct": 0,
+      "points": 100
+    },
+    {
+      "id": 5,
+      "question_en": "What type of footwear should be used for working at height?",
+      "question_mr": "उंचीवर काम करताना कोणत्या प्रकारचे पादत्राणे वापरावीत?",
+      "options_en": [
+        "Anti‑slip",
+        "Casual",
+        "Loose",
+        "None"
+      ],
+      "options_mr": [
+        "स्लिपरोधक",
+        "सामान्य",
+        "सैल",
+        "काहीही नाही"
+      ],
+      "correct": 0,
+      "points": 100
+    },
+    {
+      "id": 6,
+      "question_en": "How does weather affect work at height?",
+      "question_mr": "हवामानाचा उंचीवरील कामावर कसा परिणाम होतो?",
+      "options_en": [
+        "Safety",
+        "Nothing",
+        "Fashion",
+        "None"
+      ],
+      "options_mr": [
+        "सुरक्षा",
+        "काहीही नाही",
+        "फॅशन",
+        "काहीही नाही"
+      ],
+      "correct": 0,
+      "points": 100
+    },
+    {
+      "id": 7,
+      "question_en": "What should a working platform be like?",
+      "question_mr": "कामाची प्लॅटफॉर्म कशी असावी?",
+      "options_en": [
+        "Stable",
+        "Broken",
+        "Tilted",
+        "None"
+      ],
+      "options_mr": [
+        "स्थिर",
+        "तुटलेली",
+        "कललेली",
+        "काहीही नाही"
+      ],
+      "correct": 0,
+      "points": 100
+    },
+    {
+      "id": 8,
+      "question_en": "Working alone at height should be?",
+      "question_mr": "उंचीवर एकट्याने काम करणे कसे असते?",
+      "options_en": [
+        "Avoid",
+        "Recommended",
+        "Required",
+        "Safe"
+      ],
+      "options_mr": [
+        "टाळावे",
+        "शिफारस केलेले",
+        "आवश्यक",
+        "सुरक्षित"
+      ],
+      "correct": 0,
+      "points": 100
+    },
+    {
+      "id": 9,
+      "question_en": "What is a fall arrest system used for?",
+      "question_mr": "फॉल अरेस्ट सिस्टम कशासाठी वापरली जाते?",
+      "options_en": [
+        "Protection",
+        "Decoration",
+        "Noise",
+        "None"
+      ],
+      "options_mr": [
+        "संरक्षणासाठी",
+        "सजावट",
+        "आवाजासाठी",
+        "काहीही नाही"
+      ],
+      "correct": 0,
+      "points": 100
+    },
+    {
+      "id": 10,
+      "question_en": "What must be done before using a safety harness?",
+      "question_mr": "सेफ्टी हार्नेस वापरण्यापूर्वी काय केले पाहिजे?",
+      "options_en": [
+        "Inspect",
+        "Ignore",
+        "Throw",
+        "Tear"
+      ],
+      "options_mr": [
+        "तपासणी करणे",
+        "दुर्लक्ष करणे",
+        "फेकून देणे",
+        "फाडून टाकणे"
+      ],
+      "correct": 0,
+      "points": 100
+    }
+  ],
+  "First Aid": [
+    {
+      "id": 1,
+      "question_en": "What should be the first step when you approach an injured person?",
+      "question_mr": "जखमी व्यक्तीकडे गेल्यावर पहिले पाऊल कोणते असावे?",
+      "options_en": [
+        "Check response",
+        "Run away",
+        "Shout",
+        "Ignore"
+      ],
+      "options_mr": [
+        "प्रतिक्रिया तपासणे",
+        "पळून जाणे",
+        "आरडा-ओरडा करणे",
+        "दुर्लक्ष करणे"
+      ],
+      "correct": 0,
+      "points": 100
+    },
+    {
+      "id": 2,
+      "question_en": "What is the correct CPR compression‑to‑breath ratio?",
+      "question_mr": "CPR देताना कॉम्प्रेशन आणि श्वास यांचे योग्य प्रमाण किती असते?",
+      "options_en": [
+        "30:2",
+        "10:1",
+        "20:5",
+        "None"
+      ],
+      "options_mr": [
+        "३०:२",
+        "१०:१",
+        "२०:५",
+        "काहीही नाही"
+      ],
+      "correct": 0,
+      "points": 100
+    },
+    {
+      "id": 3,
+      "question_en": "How should heavy bleeding be controlled?",
+      "question_mr": "जास्त रक्तस्त्राव झाल्यास तो कसा थांबवावा?",
+      "options_en": [
+        "Apply pressure",
+        "Ignore",
+        "Wash",
+        "None"
+      ],
+      "options_mr": [
+        "दाब देणे",
+        "दुर्लक्ष करणे",
+        "धुणे",
+        "काहीही नाही"
+      ],
+      "correct": 0,
+      "points": 100
+    },
+    {
+      "id": 4,
+      "question_en": "How are burns treated initially?",
+      "question_mr": "भाजल्यावर सुरुवातीला काय करावे?",
+      "options_en": [
+        "Cool water",
+        "Oil",
+        "Cream",
+        "Sand"
+      ],
+      "options_mr": [
+        "थंड पाण्याने धुणे",
+        "तेल लावणे",
+        "क्रीम लावणे",
+        "वाळू लावणे"
+      ],
+      "correct": 0,
+      "points": 100
+    },
+    {
+      "id": 5,
+      "question_en": "How should a fracture be supported?",
+      "question_mr": "फ्रॅक्चर झाल्यास कशी मदत करावी?",
+      "options_en": [
+        "Immobilize",
+        "Move fast",
+        "Run",
+        "None"
+      ],
+      "options_mr": [
+        "हलू न देणे",
+        "लवकर हलवणे",
+        "पळणे",
+        "काहीही नाही"
+      ],
+      "correct": 0,
+      "points": 100
+    },
+    {
+      "id": 6,
+      "question_en": "What is the universal sign of choking?",
+      "question_mr": "गळ्यात अडकल्यावर व्यक्ती कोणते लक्षण दाखवते?",
+      "options_en": [
+        "Clutch throat",
+        "Jump",
+        "Laugh",
+        "None"
+      ],
+      "options_mr": [
+        "गळा धरून ठेवणे",
+        "उडी मारणे",
+        "हसणे",
+        "काहीही नाही"
+      ],
+      "correct": 0,
+      "points": 100
+    },
+    {
+      "id": 7,
+      "question_en": "Where should a first aid kit be kept?",
+      "question_mr": "फर्स्ट एड किट कुठे ठेवावे?",
+      "options_en": [
+        "Accessible",
+        "Hidden",
+        "Locked forever",
+        "None"
+      ],
+      "options_mr": [
+        "सहज उपलब्ध",
+        "लपवून ठेवणे",
+        "नेहमी लॉक ठेवणे",
+        "काहीही नाही"
+      ],
+      "correct": 0,
+      "points": 100
+    },
+    {
+      "id": 8,
+      "question_en": "How should you help a fainting victim?",
+      "question_mr": "बेशुद्ध पडलेल्या व्यक्तीस कशी मदत करावी?",
+      "options_en": [
+        "Lay down",
+        "Stand",
+        "Run",
+        "Ignore"
+      ],
+      "options_mr": [
+        "आडवे झोपवणे",
+        "उभे ठेवणे",
+        "पळून जाणे",
+        "दुर्लक्ष करणे"
+      ],
+      "correct": 0,
+      "points": 100
+    },
+    {
+      "id": 9,
+      "question_en": "What is the correct first aid response for a snake bite?",
+      "question_mr": "साप चावल्यानंतर योग्य फर्स्ट एड कोणते?",
+      "options_en": [
+        "Immobilize limb",
+        "Cut wound",
+        "Run",
+        "Suck venom"
+      ],
+      "options_mr": [
+        "अंग हलू न देणे",
+        "जखम कापणे",
+        "पळणे",
+        "विष शोषणे"
+      ],
+      "correct": 0,
+      "points": 100
+    },
+    {
+      "id": 10,
+      "question_en": "What is a common symptom of shock?",
+      "question_mr": "शॉक आल्याचे सामान्य लक्षण कोणते?",
+      "options_en": [
+        "Pale skin",
+        "Strong voice",
+        "Laughing",
+        "None"
+      ],
+      "options_mr": [
+        "फिकट त्वचा",
+        "जोरदार आवाज",
+        "हसणे",
+        "काहीही नाही"
+      ],
+      "correct": 0,
+      "points": 100
+    }
+  ],
+  "Machine Guarding": [
+    {
+      "id": 1,
+      "question_en": "What does a machine guard protect?",
+      "question_mr": "मशीन गार्ड कोणाचे संरक्षण करते?",
+      "options_en": [
+        "Operator",
+        "Visitor",
+        "Machine only",
+        "None"
+      ],
+      "options_mr": [
+        "ऑपरेटर",
+        "भेट देणारे",
+        "फक्त मशीन",
+        "काहीही नाही"
+      ],
+      "correct": 0,
+      "points": 100
+    },
+    {
+      "id": 2,
+      "question_en": "When should a machine guard be removed?",
+      "question_mr": "मशीन गार्ड कधी काढावा?",
+      "options_en": [
+        "Never",
+        "Whenever",
+        "Always",
+        "None"
+      ],
+      "options_mr": [
+        "कधीच नाही",
+        "कधीही",
+        "नेहमी",
+        "काहीही नाही"
+      ],
+      "correct": 0,
+      "points": 100
+    },
+    {
+      "id": 3,
+      "question_en": "Which type of machine guard is safest?",
+      "question_mr": "कोणत्या प्रकारचा मशीन गार्ड सर्वात सुरक्षित असतो?",
+      "options_en": [
+        "Fixed",
+        "Loose",
+        "Broken",
+        "None"
+      ],
+      "options_mr": [
+        "स्थिर",
+        "सैल",
+        "तुटलेला",
+        "काहीही नाही"
+      ],
+      "correct": 0,
+      "points": 100
+    },
+    {
+      "id": 4,
+      "question_en": "What does an interlock system prevent?",
+      "question_mr": "इंटरलॉक सिस्टम कोणती गोष्ट टाळते?",
+      "options_en": [
+        "Operation when open",
+        "Speed",
+        "Noise",
+        "None"
+      ],
+      "options_mr": [
+        "गार्ड उघडा असताना मशीन सुरू होणे",
+        "वेग",
+        "आवाज",
+        "काहीही नाही"
+      ],
+      "correct": 0,
+      "points": 100
+    },
+    {
+      "id": 5,
+      "question_en": "Loose clothing near machines should be?",
+      "question_mr": "मशीनजवळ सैल कपडे कसे असावेत?",
+      "options_en": [
+        "Avoid",
+        "Encourage",
+        "Ignore",
+        "None"
+      ],
+      "options_mr": [
+        "टाळावे",
+        "प्रोत्साहन द्यावे",
+        "दुर्लक्ष करावे",
+        "काहीही नाही"
+      ],
+      "correct": 0,
+      "points": 100
+    },
+    {
+      "id": 6,
+      "question_en": "What is required before starting a machine?",
+      "question_mr": "मशीन सुरू करण्यापूर्वी काय आवश्यक आहे?",
+      "options_en": [
+        "Proper guarding",
+        "No guarding",
+        "Random",
+        "None"
+      ],
+      "options_mr": [
+        "योग्य गार्डिंग",
+        "गार्डिंग नसणे",
+        "काहीही",
+        "काहीही नाही"
+      ],
+      "correct": 0,
+      "points": 100
+    },
+    {
+      "id": 7,
+      "question_en": "What is required during machine maintenance?",
+      "question_mr": "मशीनच्या मेंटेनन्स दरम्यान काय आवश्यक असते?",
+      "options_en": [
+        "Isolation",
+        "Running",
+        "Speed",
+        "None"
+      ],
+      "options_mr": [
+        "ऊर्जा विलगीकरण",
+        "मशीन चालू ठेवणे",
+        "वेग",
+        "काहीही नाही"
+      ],
+      "correct": 0,
+      "points": 100
+    },
+    {
+      "id": 8,
+      "question_en": "How often should machine guards be checked?",
+      "question_mr": "मशीन गार्ड्स किती वेळा तपासावेत?",
+      "options_en": [
+        "Regularly",
+        "Never",
+        "Rarely",
+        "None"
+      ],
+      "options_mr": [
+        "नियमित",
+        "कधीच नाही",
+        "क्वचित",
+        "काहीही नाही"
+      ],
+      "correct": 0,
+      "points": 100
+    },
+    {
+      "id": 9,
+      "question_en": "Who needs training for machine operation?",
+      "question_mr": "मशीन ऑपरेशनसाठी प्रशिक्षण कोणाला आवश्यक आहे?",
+      "options_en": [
+        "Operators",
+        "Everyone",
+        "Visitors",
+        "None"
+      ],
+      "options_mr": [
+        "ऑपरेटर",
+        "सर्वांना",
+        "भेट देणारे",
+        "काहीही नाही"
+      ],
+      "correct": 0,
+      "points": 100
+    },
+    {
+      "id": 10,
+      "question_en": "What should you do if a machine guard is missing?",
+      "question_mr": "मशीन गार्ड नसल्यास काय करावे?",
+      "options_en": [
+        "Report",
+        "Ignore",
+        "Use anyway",
+        "None"
+      ],
+      "options_mr": [
+        "तक्रार नोंदवणे",
+        "दुर्लक्ष करणे",
+        "तसेच वापरणे",
+        "काहीही नाही"
+      ],
+      "correct": 0,
+      "points": 100
+    }
+  ],
+  "Chemical Safety": [
+    {
+      "id": 1,
+      "question_en": "What information does an MSDS provide?",
+      "question_mr": "MSDS कोणती माहिती प्रदान करते?",
+      "options_en": [
+        "Chemical info",
+        "Food info",
+        "Weather",
+        "None"
+      ],
+      "options_mr": [
+        "रासायनिक माहिती",
+        "अन्नाची माहिती",
+        "हवामान",
+        "काहीही नाही"
+      ],
+      "correct": 0,
+      "points": 100
+    },
+    {
+      "id": 2,
+      "question_en": "What should be worn while handling chemicals?",
+      "question_mr": "रसायन हाताळताना काय परिधान करावे?",
+      "options_en": [
+        "Gloves",
+        "Slippers",
+        "None",
+        "Casual"
+      ],
+      "options_mr": [
+        "हातमोजे",
+        "चप्पल",
+        "काहीही नाही",
+        "सामान्य कपडे"
+      ],
+      "correct": 0,
+      "points": 100
+    },
+    {
+      "id": 3,
+      "question_en": "How should chemicals be stored?",
+      "question_mr": "रसायने कशी साठवली पाहिजेत?",
+      "options_en": [
+        "Labeled",
+        "Random",
+        "Mixed",
+        "None"
+      ],
+      "options_mr": [
+        "लेबल लावलेली",
+        "अनियमित",
+        "मिश्रित",
+        "काहीही नाही"
+      ],
+      "correct": 0,
+      "points": 100
+    },
+    {
+      "id": 4,
+      "question_en": "What should be done in case of a chemical spill?",
+      "question_mr": "रसायन सांडल्यास काय करावे?",
+      "options_en": [
+        "Clean safely",
+        "Ignore",
+        "Hide",
+        "None"
+      ],
+      "options_mr": [
+        "सुरक्षितपणे साफ करणे",
+        "दुर्लक्ष करणे",
+        "लपवणे",
+        "काहीही नाही"
+      ],
+      "correct": 0,
+      "points": 100
+    },
+    {
+      "id": 5,
+      "question_en": "What protects you from inhalation risks?",
+      "question_mr": "श्वसनाच्या धोक्यापासून बचाव करण्यासाठी काय वापरावे?",
+      "options_en": [
+        "Respirator",
+        "Scarf",
+        "Shirt",
+        "None"
+      ],
+      "options_mr": [
+        "श्वसन यंत्र",
+        "स्कार्फ",
+        "शर्ट",
+        "काहीही नाही"
+      ],
+      "correct": 0,
+      "points": 100
+    },
+    {
+      "id": 6,
+      "question_en": "What is the rule about mixing chemicals?",
+      "question_mr": "रसायने मिसळण्याबाबत काय नियम आहे?",
+      "options_en": [
+        "Avoid unless trained",
+        "Do always",
+        "None",
+        "A"
+      ],
+      "options_mr": [
+        "प्रशिक्षण नसल्यास टाळावे",
+        "नेहमी करावे",
+        "काहीही नाही",
+        "A"
+      ],
+      "correct": 0,
+      "points": 100
+    },
+    {
+      "id": 7,
+      "question_en": "What should be done in case of an acid splash?",
+      "question_mr": "आम्ल उडाल्यास काय करावे?",
+      "options_en": [
+        "Wash with water",
+        "Close eyes",
+        "Ignore",
+        "None"
+      ],
+      "options_mr": [
+        "पाण्याने धुणे",
+        "डोळे बंद करणे",
+        "दुर्लक्ष करणे",
+        "काहीही नाही"
+      ],
+      "correct": 0,
+      "points": 100
+    },
+    {
+      "id": 8,
+      "question_en": "Is ventilation needed when working with chemicals?",
+      "question_mr": "रसायनांसोबत काम करताना वायुवीजन आवश्यक आहे का?",
+      "options_en": [
+        "Yes",
+        "No",
+        "Maybe",
+        "Never"
+      ],
+      "options_mr": [
+        "होय",
+        "नाही",
+        "कदाचित",
+        "कधीच नाही"
+      ],
+      "correct": 0,
+      "points": 100
+    },
+    {
+      "id": 9,
+      "question_en": "Is training required for chemical handling?",
+      "question_mr": "रसायन हाताळण्यासाठी प्रशिक्षण आवश्यक आहे का?",
+      "options_en": [
+        "Yes",
+        "No",
+        "Maybe",
+        "Never"
+      ],
+      "options_mr": [
+        "होय",
+        "नाही",
+        "कदाचित",
+        "कधीच नाही"
+      ],
+      "correct": 0,
+      "points": 100
+    },
+    {
+      "id": 10,
+      "question_en": "What do chemical label colors indicate?",
+      "question_mr": "रसायनांच्या लेबलवरील रंग काय दर्शवतात?",
+      "options_en": [
+        "Hazard info",
+        "Decoration",
+        "Design",
+        "None"
+      ],
+      "options_mr": [
+        "धोक्याची माहिती",
+        "सजावट",
+        "डिझाईन",
+        "काहीही नाही"
+      ],
+      "correct": 0,
+      "points": 100
+    }
+  ],
+  "Sustainability": [
+    {
+      "id": 1,
+      "question_en": "What does 'Reduce' mean in environmental terms?",
+      "question_mr": "पर्यावरणाच्या दृष्टीने 'Reduce' म्हणजे काय?",
+      "options_en": [
+        "Use less",
+        "Use more",
+        "Waste",
+        "None"
+      ],
+      "options_mr": [
+        "कमी वापरणे",
+        "जास्त वापरणे",
+        "वाया घालवणे",
+        "काहीही नाही"
+      ],
+      "correct": 0,
+      "points": 100
+    },
+    {
+      "id": 2,
+      "question_en": "Which of the following materials can be recycled?",
+      "question_mr": "खालीलपैकी कोणते साहित्य पुनर्वापर करता येते?",
+      "options_en": [
+        "Paper",
+        "Food waste",
+        "All chemicals",
+        "None"
+      ],
+      "options_mr": [
+        "कागद",
+        "अन्न कचरा",
+        "सर्व रसायने",
+        "काहीही नाही"
+      ],
+      "correct": 0,
+      "points": 100
+    },
+    {
+      "id": 3,
+      "question_en": "What helps in energy saving?",
+      "question_mr": "ऊर्जा बचतीसाठी काय करावे?",
+      "options_en": [
+        "Switch off lights",
+        "Keep on lights",
+        "None",
+        "Only fans"
+      ],
+      "options_mr": [
+        "लाईट बंद करणे",
+        "लाईट सुरू ठेवणे",
+        "काहीही नाही",
+        "फक्त फॅन बंद करणे"
+      ],
+      "correct": 0,
+      "points": 100
+    },
+    {
+      "id": 4,
+      "question_en": "What helps in saving water?",
+      "question_mr": "पाणी वाचवण्यासाठी काय करावे?",
+      "options_en": [
+        "Close taps",
+        "Open taps",
+        "Waste water",
+        "None"
+      ],
+      "options_mr": [
+        "नळ बंद करणे",
+        "नळ उघडे ठेवणे",
+        "पाणी वाया घालवणे",
+        "काहीही नाही"
+      ],
+      "correct": 0,
+      "points": 100
+    },
+    {
+      "id": 5,
+      "question_en": "What does eco‑friendly mean?",
+      "question_mr": "पर्यावरणपूरक म्हणजे काय?",
+      "options_en": [
+        "Low pollution",
+        "High pollution",
+        "None",
+        "All"
+      ],
+      "options_mr": [
+        "कमी प्रदूषण",
+        "जास्त प्रदूषण",
+        "काहीही नाही",
+        "सर्व"
+      ],
+      "correct": 0,
+      "points": 100
+    },
+    {
+      "id": 6,
+      "question_en": "Why should we plant trees?",
+      "question_mr": "झाडे का लावावीत?",
+      "options_en": [
+        "Environment",
+        "Heat",
+        "Noise",
+        "Decoration"
+      ],
+      "options_mr": [
+        "पर्यावरणासाठी",
+        "उष्णता वाढवण्यासाठी",
+        "आवाजासाठी",
+        "सजावटीसाठी"
+      ],
+      "correct": 0,
+      "points": 100
+    },
+    {
+      "id": 7,
+      "question_en": "What does 'Reuse' mean?",
+      "question_mr": "'Reuse' म्हणजे काय?",
+      "options_en": [
+        "Use again",
+        "Throw",
+        "Burn",
+        "None"
+      ],
+      "options_mr": [
+        "पुन्हा वापरणे",
+        "फेकून देणे",
+        "जाळणे",
+        "काहीही नाही"
+      ],
+      "correct": 0,
+      "points": 100
+    },
+    {
+      "id": 8,
+      "question_en": "Solar energy is?",
+      "question_mr": "सौर ऊर्जा कशी असते?",
+      "options_en": [
+        "Renewable",
+        "Wasteful",
+        "None",
+        "Rare"
+      ],
+      "options_mr": [
+        "नवीकरणीय",
+        "वायफळ",
+        "काहीही नाही",
+        "दुर्मीळ"
+      ],
+      "correct": 0,
+      "points": 100
+    },
+    {
+      "id": 9,
+      "question_en": "What does waste segregation mean?",
+      "question_mr": "कचरा विभाजन म्हणजे काय?",
+      "options_en": [
+        "Separate waste",
+        "Mix waste",
+        "Ignore",
+        "None"
+      ],
+      "options_mr": [
+        "कचरा वेगळा करणे",
+        "कचरा मिसळणे",
+        "दुर्लक्ष करणे",
+        "काहीही नाही"
+      ],
+      "correct": 0,
+      "points": 100
+    },
+    {
+      "id": 10,
+      "question_en": "What do greenhouse gases cause?",
+      "question_mr": "हरितगृह वायूंमुळे काय होते?",
+      "options_en": [
+        "Warming",
+        "Cooling",
+        "Snow",
+        "None"
+      ],
+      "options_mr": [
+        "उष्णता वाढणे",
+        "थंडावा",
+        "हिमवृष्टी",
+        "काहीही नाही"
+      ],
+      "correct": 0,
+      "points": 100
+    }
+  ]
+}

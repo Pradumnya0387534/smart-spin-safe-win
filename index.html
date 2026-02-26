@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Smart Spin Safe Win - ABB Safety Quiz Game</title>
+    <link rel="stylesheet" href="assets/css/styles.css">
+<body>
+    <!-- Audio Elements -->
+    <!-- Audio Elements - All Working URLs -->
+    <audio id="spin-sound" preload="auto">
+        <source src="https://cdn.pixabay.com/audio/2021/08/04/audio_0625c1539c.mp3" type="audio/mpeg">
+    </audio>
+
+    <audio id="tick-sound" preload="auto">
+        <source src="https://cdn.pixabay.com/audio/2021/08/04/audio_12b0c7443c.mp3" type="audio/mpeg">
+    </audio>
+
+    <audio id="applause-sound" preload="auto">
+        <source src="https://cdn.pixabay.com/audio/2021/08/04/audio_12b0c7443c.mp3" type="audio/mpeg">
+    </audio>
+
+    <audio id="wrong-sound" preload="auto">
+        <source src="https://cdn.pixabay.com/audio/2021/08/04/audio_bb630cc098.mp3" type="audio/mpeg">
+    </audio>
+
+    <audio id="timeout-sound" preload="auto">
+        <source src="https://cdn.pixabay.com/audio/2021/08/04/audio_bb630cc098.mp3" type="audio/mpeg">
+    </audio>
+
+    <audio id="celebration-sound" preload="auto">
+        <source src="https://cdn.pixabay.com/audio/2021/08/04/audio_12b0c7443c.mp3" type="audio/mpeg">
+    </audio>
+
+    <audio id="click-sound" preload="auto">
+        <source src="https://cdn.pixabay.com/audio/2021/08/04/audio_12b0c7443c.mp3" type="audio/mpeg">
+    </audio>
+
+    <audio id="timer-background" preload="auto" loop>
+    <source src="assets/audio/timer-tick.mp3" type="audio/mpeg">
+    </audio>
+
+
+
+
+
+
+
+
+
+    <!-- LOGIN PAGE -->
+    <div class="login-container" id="loginPage">
+        <div class="login-left">
+            <div class="login-card">
+                <img src="assets/img/abb-logo.png" alt="ABB Logo" class="login-logo" onerror="this.style.display='none'">
+                <h1>Smart Spin, Safe Win!!</h1>
+                <p class="login-subtitle">Interactive Safety Quiz Game</p>
+                
+                <form id="loginForm" class="login-form">
+                    <div class="form-group">
+                        <label for="username">Username</label>
+                        <input type="text" id="username" name="username" required autocomplete="username">
+                    </div>
+                    <div class="form-group">
+                        <label for="password">Password</label>
+                        <input type="password" id="password" name="password" required autocomplete="current-password">
+                    </div>
+                    <button type="submit" class="btn btn-primary">Login</button>
+                    </form>
+            </div>
+        </div>
+        <div class="login-right">
+            <img src="assets/img/lets-make-it-safe.png" alt="Let's Make It Safe" class="banner-image" onerror="this.style.display='none'">
+        </div>
+    </div>
+
+        <!-- HOME PAGE -->
+    <div class="page" id="homePage">
+        <div class="home-split-container">
+            <!-- LEFT SIDE - Rules Card -->
+            <div class="home-left">
+                <div class="home-card">
+                    <img src="assets/img/abb-logo.png" alt="ABB Logo" class="home-logo" onerror="this.style.display='none'">
+                    <h1>Smart Spin Safe Win</h1>
+                    <p class="home-subtitle">Interactive Safety Quiz Game</p>
+                    
+                    <div class="rules-section">
+                        <h3>How to Play:</h3>
+                        <ul class="rules-list">
+                            <li>🎯 Click "Begin Game" to start</li>
+                            <li>🎡 Spin both wheels to select a category and points</li>
+                            <li>❓ Answer safety questions in English and Marathi</li>
+                            <li>⏱️ You have 30 seconds per question</li>
+                            <li>✅ Earn points for correct answers</li>
+                            <li>🏆 Get 2 consecutive correct answers for bonus celebration!</li>
+                            <li>🔄 Click "Reset Game" to start fresh</li>
+                        </ul>
+                    </div>
+
+                    <div class="categories-preview">
+                        <h3>Safety Categories:</h3>
+                        <div class="category-grid-home">
+                            <div class="category-item-home">⚡ Electrical Safety</div>
+                            <div class="category-item-home">🦺 PPE</div>
+                            <div class="category-item-home">🔥 Fire Safety</div>
+                            <div class="category-item-home">🧪 Chemical Safety</div>
+                            <div class="category-item-home">⚙️ Machine Safety</div>
+                            <div class="category-item-home">🚨 Emergency Response</div>
+                            <div class="category-item-home">🪑 Workplace Ergonomics</div>
+                            <div class="category-item-home">🔒 Lockout/Tagout</div>
+                        </div>
+                    </div>
+
+                    <button id="beginGameBtn" class="btn btn-primary btn-large">Begin Game</button>
+                    
+                    <div class="home-controls">
+                        <button id="muteBtn" class="btn-icon" title="Click to Enable Sound">
+                        <span class="icon-sound">🔇</span>
+                        </button>
+
+                        <button id="logoutBtn" class="btn-secondary">Logout</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- RIGHT SIDE - Image -->
+            <div class="home-right">
+                <img src="assets/img/Designer (1) (1).png" alt="Safety Game" class="home-banner-image" onerror="this.style.display='none'">
+                <div class="home-banner-overlay">
+                    <h2>National Safety Week 2026!!</h2>
+                    <p>Learn, Play, and Win with ABB Safety</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- GAME PAGE -->
+    <div class="page" id="gamePage">
+        <header class="app-header">
+            <img src="assets/img/abb-logo.png" alt="ABB Logo" class="header-logo" onerror="this.style.display='none'">
+            <h1>Smart Spin, Safe Win!!</h1>
+            <div class="header-controls">
+                <div class="score-display">
+                    <span class="score-label">Score:</span>
+                    <span id="scoreValue" class="score-value">0</span>
+                </div>
+                <button id="muteBtnGame" class="btn-icon" title="Click to Enable Sound">
+                <span class="icon-sound">🔇</span>
+                </button>
+
+                <button id="backHomeBtn" class="btn-secondary">Home</button>
+            </div>
+        </header>
+
+        <main class="game-content">
+            <!-- Wheels Section -->
+            <div id="wheelsSection" class="wheels-section">
+                <h2>Spin the Wheels!</h2>
+                <div class="wheels-container">
+                    <div class="wheel-wrapper">
+                        <h3>Category</h3>
+                        <canvas id="categoryWheel" width="300" height="300"></canvas>
+                    </div>
+                    <div class="wheel-wrapper">
+                        <h3>Question Number</h3>
+                        <canvas id="questionWheel" width="300" height="300"></canvas>
+                    </div>
+                </div>
+                <button id="spinBtn" class="btn btn-primary btn-large">Spin Both Wheels</button>
+            </div>
+
+            <!-- Selection Display -->
+            <div id="selectionSection" class="selection-section" style="display: none;">
+                <div class="selection-card">
+                    <h3>Selected Category</h3>
+                    <div class="selected-category">
+                        <span id="selectedCategoryIcon" class="category-icon-large">⚡</span>
+                        <span id="selectedCategoryName">Electrical Safety</span>
+                    </div>
+                    <div class="selected-points">
+                        <span class="points-label">Question #</span>
+                        <span id="selectedPoints" class="points-value">1</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Question Section -->
+            <div id="questionSection" class="question-section" style="display: none;">
+                <div class="timer-container">
+                    <div class="timer-circle">
+                        <svg class="timer-svg" viewBox="0 0 100 100">
+                            <circle class="timer-bg" cx="50" cy="50" r="45"></circle>
+                            <circle id="timerProgress" class="timer-progress" cx="50" cy="50" r="45"></circle>
+                        </svg>
+                        <div id="timerText" class="timer-text">30</div>
+                    </div>
+                </div>
+
+                <div class="question-card">
+                    <div class="question-header">
+                        <span id="questionCategoryBadge" class="category-badge">Electrical Safety</span>
+                        <span id="questionPointsBadge" class="points-badge">Q #1</span>
+                    </div>
+                    
+                    <div class="question-text">
+                        <div class="question-lang">
+                            <span class="lang-label">EN:</span>
+                            <p id="questionTextEn">Question text in English</p>
+                        </div>
+                        <div class="question-lang">
+                            <span class="lang-label">MR:</span>
+                            <p id="questionTextMr">प्रश्न मराठीत</p>
+                        </div>
+                    </div>
+
+                    <div id="optionsContainer" class="options-container">
+                        <!-- Options will be dynamically generated -->
+                    </div>
+
+                    <div id="feedbackSection" class="feedback-section" style="display: none;">
+                        <div id="feedbackMessage" class="feedback-message"></div>
+                        <button id="nextQuestionBtn" class="btn btn-primary">Next Question</button>
+                    </div>
+                </div>
+
+                <button id="resetGameBtn" class="btn btn-outline">Reset Game</button>
+            </div>
+        </main>
+    </div>
+
+    <!-- Congratulations Overlay -->
+    <div id="congratsOverlay" class="congrats-overlay" style="display: none;">
+        <div class="congrats-content">
+            <div class="congrats-animation">🎉</div>
+            <h2>Congratulations!</h2>
+            <p>2 Consecutive Correct Answers!</p>
+            <p class="congrats-message">Keep up the excellent work!</p>
+        </div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="assets/js/ui.js"></script>
+    <script src="assets/js/auth.js"></script>
+    <script src="assets/js/wheels.js"></script>
+    <script src="assets/js/app.js"></script>
+<noscript><img src="https://storage.abby.abb.com/akam/13/pixel_40d484cf?a=dD1kNjQxOTAzMGE1ZmJhNTI5YjZmZjgyMDZkNDM2MWUwOWYzMTNjZTNiJmpzPW9mZg==" style="visibility: hidden; position: absolute; left: -999px; top: -999px;" /></noscript><noscript><img src="https://storage.abby.abb.com/akam/13/pixel_40d484ce?a=dD1kNjQxOTAzMGE1ZmJhNTI5YjZmZjgyMDZkNDM2MWUwOWYzMTNjZTNiJmpzPW9mZg==" style="visibility: hidden; position: absolute; left: -999px; top: -999px;" /></noscript></body>
+</html>
