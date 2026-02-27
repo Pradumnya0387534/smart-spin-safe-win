@@ -11,9 +11,15 @@ let gameState = {
     currentPoints: 0,
     usedQuestions: {},
     questionsData: null,
-    };
+    timerInterval: null,
+    timeRemaining: 30
+};
 
-// Constants to change timer 
+// Timer constants
+const TIMER_DURATION = 30;
+const TIMER_WARNING_THRESHOLD = 10;
+const TIMER_CRITICAL_THRESHOLD = 5;
+
 /**
  * Load questions from JSON file
  */
@@ -72,7 +78,7 @@ function getRandomQuestion(category) {
 /**
  * Load and display a question
  * @param {string} category - The category name
- * @param {number} points - The points value
+ * @param {number} questionNum - The question number
  */
 function loadQuestion(category, questionNum) {
     console.log('[App] Loading question:', category, questionNum);
@@ -97,7 +103,7 @@ function loadQuestion(category, questionNum) {
     
     // Update question display
     document.getElementById('questionCategoryBadge').textContent = category;
-    document.getElementById('questionPointsBadge').textContent = `Q #${questionNum}`;  // was: ${points} pts
+    document.getElementById('questionPointsBadge').textContent = `Q #${questionNum}`;
     document.getElementById('questionTextEn').textContent = question.question_en;
     document.getElementById('questionTextMr').textContent = question.question_mr;
     
@@ -112,7 +118,7 @@ function loadQuestion(category, questionNum) {
     }
     
     // Start timer
-    
+    startTimer();
 }
 
 /**
@@ -146,10 +152,105 @@ function displayOptions(question) {
 /**
  * Start the countdown timer
  */
+function startTimer() {
+    // Clear any existing timer
+    if (gameState.timerInterval) {
+        clearInterval(gameState.timerInterval);
+    }
+    
+    // Reset timer
+    gameState.timeRemaining = TIMER_DURATION;
+    
+    // Update display
+    updateTimerDisplay();
+    
+    console.log('[Timer] Started - 30 seconds');
+    
+    // Start countdown
+    gameState.timerInterval = setInterval(() => {
+        gameState.timeRemaining--;
+        updateTimerDisplay();
+        
+        // Play tick sound in last 5 seconds
+        if (gameState.timeRemaining <= 5 && gameState.timeRemaining > 0) {
+            playSound('timer-tick');
+        }
+        
+        // Check if time's up
+        if (gameState.timeRemaining <= 0) {
+            handleTimeout();
+        }
+    }, 1000);
+}
 
 /**
  * Stop the timer
  */
+function stopTimer() {
+    if (gameState.timerInterval) {
+        clearInterval(gameState.timerInterval);
+        gameState.timerInterval = null;
+        stopSound('timer-tick');
+        console.log('[Timer] Stopped');
+    }
+}
+
+/**
+ * Update timer display
+ */
+function updateTimerDisplay() {
+    const timerNumber = document.getElementById('timerNumber');
+    const timerProgress = document.getElementById('timerProgress');
+    const timerText = document.getElementById('timerText');
+    
+    if (!timerNumber) return;
+    
+    // Update number
+    timerNumber.textContent = gameState.timeRemaining;
+    
+    // Update progress circle
+    if (timerProgress) {
+        const percentage = (gameState.timeRemaining / TIMER_DURATION) * 100;
+        const circumference = 2 * Math.PI * 45; // radius = 45
+        const offset = circumference - (percentage / 100) * circumference;
+        timerProgress.style.strokeDashoffset = offset;
+    }
+    
+    // Update colors based on time remaining
+    if (timerText) {
+        timerText.classList.remove('timer-warning', 'timer-critical');
+        
+        if (gameState.timeRemaining <= TIMER_CRITICAL_THRESHOLD) {
+            timerText.classList.add('timer-critical');
+        } else if (gameState.timeRemaining <= TIMER_WARNING_THRESHOLD) {
+            timerText.classList.add('timer-warning');
+        }
+    }
+}
+
+/**
+ * Handle timer timeout
+ */
+function handleTimeout() {
+    console.log('[Timer] Time is up!');
+    
+    // Stop timer
+    stopTimer();
+    
+    // Play wrong sound
+    playSound('wrong-sound');
+    
+    // Show feedback
+    showFeedback('wrong', "Time's up! ⏰");
+    
+    // Disable answer buttons
+    const optionButtons = document.querySelectorAll('.option-btn');
+    optionButtons.forEach(btn => btn.disabled = true);
+    
+    // Highlight correct answer
+    const correctIndex = gameState.currentQuestion.correct;
+    optionButtons[correctIndex].classList.add('correct');
+}
 
 /**
  * Handle answer selection
@@ -159,7 +260,7 @@ function handleAnswer(selectedIndex) {
     console.log('[App] Answer selected:', selectedIndex);
     
     // Stop timer
-   
+    stopTimer();
     
     // Disable all option buttons
     const optionButtons = document.querySelectorAll('.option-btn');
@@ -231,10 +332,6 @@ function handleWrongAnswer(selectedIndex) {
 }
 
 /**
- * Handle timeout
- */
-
-/**
  * Show feedback message
  * @param {string} type - 'correct', 'wrong', or 'timeout'
  * @param {string} message
@@ -275,7 +372,7 @@ function resetGameState() {
     console.log('[App] Resetting game state...');
     
     // Stop timer
-    
+    stopTimer();
     
     // Reset state
     gameState.score = 0;
@@ -302,6 +399,49 @@ function resetGameState() {
 }
 
 /**
+ * Reset wheels to initial state
+ */
+function resetWheels() {
+    console.log('[App] Resetting wheels...');
+    
+    // Reset game state
+    gameState.currentCategory = null;
+    gameState.currentPoints = 0;
+    gameState.currentQuestion = null;
+    
+    // Clear used questions
+    Object.keys(gameState.usedQuestions).forEach(category => {
+        gameState.usedQuestions[category] = [];
+    });
+    
+    // Reset wheel rotations
+    const categoryWheel = document.getElementById('categoryWheel');
+    if (categoryWheel) {
+        categoryWheel.style.transform = 'rotate(0deg)';
+        categoryWheel.classList.remove('spinning');
+    }
+    
+    const pointsWheel = document.getElementById('pointsWheel');
+    if (pointsWheel) {
+        pointsWheel.style.transform = 'rotate(0deg)';
+        pointsWheel.classList.remove('spinning');
+    }
+    
+    // Enable spin button
+    const spinBtn = document.getElementById('spinBtn');
+    if (spinBtn) {
+        spinBtn.disabled = false;
+    }
+    
+    // Show selection section (where wheels are), hide question section
+    showSection('selectionSection');
+    hideSection('questionSection');
+    hideSection('resultsSection');
+    
+    console.log('[App] Wheels reset complete');
+}
+
+/**
  * Initialize game page
  */
 function initGamePage() {
@@ -320,7 +460,6 @@ function initGamePage() {
     const backHomeBtn = document.getElementById('backHomeBtn');
     if (backHomeBtn) {
         backHomeBtn.addEventListener('click', () => {
-           
             showPage('homePage');
         });
     }
@@ -350,13 +489,17 @@ function initGamePage() {
 async function initApp() {
     console.log('[App] Initializing application...');
     
-    // Load questions data
-    await loadQuestionsData();
-    
-    // Initialize game page
-    initGamePage();
-    
-    console.log('[App] Application initialized successfully');
+    try {
+        // Load questions data
+        await loadQuestionsData();
+        
+        // Initialize game page
+        initGamePage();
+        
+        console.log('[App] Application initialized successfully');
+    } catch (error) {
+        console.error('[App] Initialization error:', error);
+    }
 }
 
 // Initialize on DOM load
@@ -368,3 +511,7 @@ document.addEventListener('DOMContentLoaded', () => {
 window.loadQuestion = loadQuestion;
 window.resetGameState = resetGameState;
 window.gameState = gameState;
+window.startTimer = startTimer;
+window.stopTimer = stopTimer;
+window.updateTimerDisplay = updateTimerDisplay;
+window.handleTimeout = handleTimeout;
