@@ -198,7 +198,6 @@ function stopSound(soundId) {
 function stopAllSounds() {
     const sounds = [
         'spin-sound',
-        'tick-sound',
         'applause-sound',
         'wrong-sound',
         'timeout-sound',
