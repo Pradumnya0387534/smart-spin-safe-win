@@ -396,6 +396,9 @@ function resetGameState() {
 /**
  * Reset wheels to initial state
  */
+/**
+ * Reset wheels to initial state
+ */
 function resetWheels() {
     console.log('[App] Resetting wheels...');
     
@@ -409,13 +412,33 @@ function resetWheels() {
         gameState.usedQuestions[category] = [];
     });
     
-    // Show wheels section, hide question section
-    showSection('wheelSection');
+    // Reset wheel rotations
+    const categoryWheel = document.getElementById('categoryWheel');
+    if (categoryWheel) {
+        categoryWheel.style.transform = 'rotate(0deg)';
+        categoryWheel.classList.remove('spinning');
+    }
+    
+    const pointsWheel = document.getElementById('pointsWheel');
+    if (pointsWheel) {
+        pointsWheel.style.transform = 'rotate(0deg)';
+        pointsWheel.classList.remove('spinning');
+    }
+    
+    // Enable spin button
+    const spinBtn = document.getElementById('spinBtn');
+    if (spinBtn) {
+        spinBtn.disabled = false;
+    }
+    
+    // Show selection section (where wheels are), hide question section
+    showSection('selectionSection');  // ✅ Changed from 'wheelSection'
     hideSection('questionSection');
     hideSection('resultsSection');
     
     console.log('[App] Wheels reset complete');
 }
+
 
 /**
  * Initialize game page
