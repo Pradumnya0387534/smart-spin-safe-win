@@ -11,9 +11,15 @@ let gameState = {
     currentPoints: 0,
     usedQuestions: {},
     questionsData: null,
-    };
+    timerInterval: null,
+    timeRemaining: 30
+};
 
 // Constants to change timer 
+const TIMER_DURATION = 30;
+const TIMER_WARNING_THRESHOLD = 10;
+const TIMER_CRITICAL_THRESHOLD = 5;
+
 /**
  * Load questions from JSON file
  */
@@ -147,9 +153,11 @@ function displayOptions(question) {
  * Start the countdown timer
  */
 
+
 /**
  * Stop the timer
  */
+
 
 /**
  * Handle answer selection
@@ -233,6 +241,7 @@ function handleWrongAnswer(selectedIndex) {
 /**
  * Handle timeout
  */
+
 
 /**
  * Show feedback message
