@@ -1774,13 +1774,13 @@
         "Keep on lights",
         "None",
         "Only fans",
-        "Switch off lights",
+        "Switch off lights"
       ],
       "options_mr": [
         "लाईट सुरू ठेवणे",
         "काहीही नाही",
         "फक्त फॅन चालू ठेवणे",
-        "लाईट बंद करणे",
+        "लाईट बंद करणे"
       ],
       "correct": 3,
       "points": 100
@@ -1831,13 +1831,13 @@
         "Heat",
         "Noise",
         "Decoration",
-        "Environment",
+        "Environment"
       ],
       "options_mr": [
         "उष्णता वाढवण्यासाठी",
         "आवाजासाठी",
         "सजावटीसाठी",
-        "पर्यावरणासाठी",
+        "पर्यावरणासाठी"
       ],
       "correct": 3,
       "points": 100
