@@ -106,6 +106,7 @@ body {
     margin-bottom: 1.5rem;
 }
 
+
 .login-card h1 {
     font-size: 2rem;
     color: var(--abb-red);
@@ -273,6 +274,7 @@ body {
     margin-right: 20px;
 }
 
+
 .app-header h1 {
     flex: 1;
     font-size: 1.5rem;
@@ -280,6 +282,7 @@ body {
     text-align: center;  /* Center the title */
     margin-right: 200px;  /* Offset for controls on right */
 }
+
 
 .header-controls {
     display: flex;
@@ -302,6 +305,7 @@ body {
 .score-value {
     font-size: 1.2rem;
 }
+
 
 /* ===== HOME PAGE SPLIT-SCREEN LAYOUT ===== */
 .home-split-container {
@@ -477,6 +481,7 @@ body {
     }
 }
 
+
 /* ===== GAME PAGE ===== */
 .game-content {
     flex: 1;
@@ -589,19 +594,77 @@ canvas {
 }
 
 /* Timer */
+.timer-container {
+    display: flex;
+    justify-content: center;
+}
+
+.timer-circle {
+    position: relative;
+    width: 120px;
+    height: 120px;
+}
+
+.timer-svg {
+    width: 100%;
+    height: 100%;
+    transform: rotate(-90deg);
+}
+
+.timer-bg {
+    fill: none;
+    stroke: var(--gray-200);
+    stroke-width: 8;
+}
+
+.timer-progress {
+    fill: none;
+    stroke: var(--abb-lilac);
+    stroke-width: 8;
+    stroke-linecap: round;
+    stroke-dasharray: 283;
+    stroke-dashoffset: 0;
+    transition: stroke-dashoffset 1s linear, stroke 0.3s ease;
+}
+
+.timer-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: var(--abb-lilac);
+}
 
 /* Timer Warning States */
-.timer-warning 
+.timer-warning .timer-progress {
+    stroke: var(--warning);
+    animation: pulse-warning 1s infinite;
+}
 
-.timer-warning 
+.timer-warning .timer-text {
+    color: var(--warning);
+}
 
-.timer-critical 
+.timer-critical .timer-progress {
+    stroke: var(--danger);
+    animation: pulse-critical 0.5s infinite;
+}
 
-.timer-critical 
+.timer-critical .timer-text {
+    color: var(--danger);
+}
 
+@keyframes pulse-warning {
+    0%, 100% { transform: rotate(-90deg) scale(1); }
+    50% { transform: rotate(-90deg) scale(1.05); }
+}
 
-
-
+@keyframes pulse-critical {
+    0%, 100% { transform: rotate(-90deg) scale(1); }
+    50% { transform: rotate(-90deg) scale(1.1); }
+}
 
 /* Question Card */
 .question-card {
