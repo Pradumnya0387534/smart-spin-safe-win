@@ -15,7 +15,7 @@ let gameState = {
     timeRemaining: 30
 };
 
-// Timer constants
+// Constants to change timer 
 const TIMER_DURATION = 30;
 const TIMER_WARNING_THRESHOLD = 10;
 const TIMER_CRITICAL_THRESHOLD = 5;
@@ -78,7 +78,7 @@ function getRandomQuestion(category) {
 /**
  * Load and display a question
  * @param {string} category - The category name
- * @param {number} questionNum - The question number
+ * @param {number} points - The points value
  */
 function loadQuestion(category, questionNum) {
     console.log('[App] Loading question:', category, questionNum);
@@ -103,7 +103,7 @@ function loadQuestion(category, questionNum) {
     
     // Update question display
     document.getElementById('questionCategoryBadge').textContent = category;
-    document.getElementById('questionPointsBadge').textContent = `Q #${questionNum}`;
+    document.getElementById('questionPointsBadge').textContent = `Q #${questionNum}`;  // was: ${points} pts
     document.getElementById('questionTextEn').textContent = question.question_en;
     document.getElementById('questionTextMr').textContent = question.question_mr;
     
@@ -153,103 +153,97 @@ function displayOptions(question) {
  * Start the countdown timer
  */
 function startTimer() {
-    // Clear any existing timer
+    console.log('[App] Starting timer...');
+    
+    // Reset timer state
+    gameState.timeRemaining = TIMER_DURATION;
+    
+    // Reset timer visual
+    const timerText = document.getElementById('timerText');
+    const timerProgress = document.getElementById('timerProgress');
+    const timerCircle = document.querySelector('.timer-circle');
+    
+    if (timerText) timerText.textContent = TIMER_DURATION;
+    if (timerProgress) {
+        timerProgress.style.strokeDashoffset = '0';
+        timerProgress.style.stroke = '#6764f6';
+    }
+    if (timerCircle) {
+        timerCircle.classList.remove('timer-warning', 'timer-critical');
+    }
+    
+    // Play background music
+    playLoopingSound('timer-background');
+    
+    // Clear any existing interval
     if (gameState.timerInterval) {
         clearInterval(gameState.timerInterval);
     }
     
-    // Reset timer
-    gameState.timeRemaining = TIMER_DURATION;
-    
-    // Update display
-    updateTimerDisplay();
-    
-    console.log('[Timer] Started - 30 seconds');
-    
     // Start countdown
     gameState.timerInterval = setInterval(() => {
         gameState.timeRemaining--;
-        updateTimerDisplay();
         
-        // Play tick sound in last 5 seconds
-        if (gameState.timeRemaining <= 5 && gameState.timeRemaining > 0) {
-            playSound('timer-tick');
+        // Update display
+        if (timerText) {
+            timerText.textContent = gameState.timeRemaining;
         }
         
-        // Check if time's up
+        // Update progress circle
+        if (timerProgress) {
+            const progress = gameState.timeRemaining / TIMER_DURATION;
+            const offset = 283 * (1 - progress);
+            timerProgress.style.strokeDashoffset = offset;
+        }
+        
+        // Warning at 10 seconds
+        if (gameState.timeRemaining === TIMER_WARNING_THRESHOLD) {
+            console.log('[App] Timer warning threshold reached');
+            //stopSound('timer-background');
+            playSound('timer-ticking');
+            
+            if (timerCircle) {
+                timerCircle.classList.add('timer-warning');
+            }
+        }
+        
+        // Critical at 5 seconds
+        if (gameState.timeRemaining === TIMER_CRITICAL_THRESHOLD) {
+            console.log('[App] Timer critical threshold reached');
+            playSound('timer-warning');
+            
+            if (timerCircle) {
+                timerCircle.classList.remove('timer-warning');
+                timerCircle.classList.add('timer-critical');
+            }
+        }
+        
+        // Time's up
         if (gameState.timeRemaining <= 0) {
+            console.log('[App] Time is up!');
+            stopTimer();
             handleTimeout();
         }
     }, 1000);
+    //stopSound('timer-background');
+
 }
 
 /**
  * Stop the timer
  */
 function stopTimer() {
+    console.log('[App] Stopping timer...');
+    
     if (gameState.timerInterval) {
         clearInterval(gameState.timerInterval);
         gameState.timerInterval = null;
-        stopSound('timer-tick');
-        console.log('[Timer] Stopped');
-    }
-}
-
-/**
- * Update timer display
- */
-function updateTimerDisplay() {
-    const timerNumber = document.getElementById('timerNumber');
-    const timerProgress = document.getElementById('timerProgress');
-    const timerText = document.getElementById('timerText');
-    
-    if (!timerNumber) return;
-    
-    // Update number
-    timerNumber.textContent = gameState.timeRemaining;
-    
-    // Update progress circle
-    if (timerProgress) {
-        const percentage = (gameState.timeRemaining / TIMER_DURATION) * 100;
-        const circumference = 2 * Math.PI * 45; // radius = 45
-        const offset = circumference - (percentage / 100) * circumference;
-        timerProgress.style.strokeDashoffset = offset;
     }
     
-    // Update colors based on time remaining
-    if (timerText) {
-        timerText.classList.remove('timer-warning', 'timer-critical');
-        
-        if (gameState.timeRemaining <= TIMER_CRITICAL_THRESHOLD) {
-            timerText.classList.add('timer-critical');
-        } else if (gameState.timeRemaining <= TIMER_WARNING_THRESHOLD) {
-            timerText.classList.add('timer-warning');
-        }
-    }
-}
-
-/**
- * Handle timer timeout
- */
-function handleTimeout() {
-    console.log('[Timer] Time is up!');
-    
-    // Stop timer
-    stopTimer();
-    
-    // Play wrong sound
-    playSound('wrong-sound');
-    
-    // Show feedback
-    showFeedback('wrong', "Time's up! ⏰");
-    
-    // Disable answer buttons
-    const optionButtons = document.querySelectorAll('.option-btn');
-    optionButtons.forEach(btn => btn.disabled = true);
-    
-    // Highlight correct answer
-    const correctIndex = gameState.currentQuestion.correct;
-    optionButtons[correctIndex].classList.add('correct');
+    // Stop all timer sounds
+    stopSound('timer-background');
+    stopSound('timer-ticking');
+    stopSound('timer-warning');
 }
 
 /**
@@ -332,6 +326,30 @@ function handleWrongAnswer(selectedIndex) {
 }
 
 /**
+ * Handle timeout
+ */
+function handleTimeout() {
+    console.log('[App] Timeout!');
+    
+    // Reset consecutive correct
+    gameState.consecutiveCorrect = 0;
+    
+    // Disable all option buttons
+    const optionButtons = document.querySelectorAll('.option-btn');
+    optionButtons.forEach(btn => btn.disabled = true);
+    
+    // Highlight correct answer with timeout style
+    optionButtons[gameState.currentQuestion.correct].classList.add('timeout');
+    
+    // Play timeout sound
+    playSound('timeout-sound');
+    
+    // Show feedback
+    const correctAnswerEn = gameState.currentQuestion.options_en[gameState.currentQuestion.correct];
+    showFeedback('timeout', `Time's up! The correct answer is: ${correctAnswerEn}`);
+}
+
+/**
  * Show feedback message
  * @param {string} type - 'correct', 'wrong', or 'timeout'
  * @param {string} message
@@ -353,16 +371,11 @@ function showFeedback(type, message) {
 function handleNextQuestion() {
     console.log('[App] Loading next question...');
     
-    // Reset wheels and show selection section
+    // Reset wheels
     resetWheels();
-    
-    // Make sure selection section is visible
-    showSection('selectionSection');
     
     // Hide question section
     hideSection('questionSection');
-    
-    console.log('[App] Ready for next spin');
 }
 
 /**
@@ -399,49 +412,6 @@ function resetGameState() {
 }
 
 /**
- * Reset wheels to initial state
- */
-function resetWheels() {
-    console.log('[App] Resetting wheels...');
-    
-    // Reset game state
-    gameState.currentCategory = null;
-    gameState.currentPoints = 0;
-    gameState.currentQuestion = null;
-    
-    // Clear used questions
-    Object.keys(gameState.usedQuestions).forEach(category => {
-        gameState.usedQuestions[category] = [];
-    });
-    
-    // Reset wheel rotations
-    const categoryWheel = document.getElementById('categoryWheel');
-    if (categoryWheel) {
-        categoryWheel.style.transform = 'rotate(0deg)';
-        categoryWheel.classList.remove('spinning');
-    }
-    
-    const pointsWheel = document.getElementById('pointsWheel');
-    if (pointsWheel) {
-        pointsWheel.style.transform = 'rotate(0deg)';
-        pointsWheel.classList.remove('spinning');
-    }
-    
-    // Enable spin button
-    const spinBtn = document.getElementById('spinBtn');
-    if (spinBtn) {
-        spinBtn.disabled = false;
-    }
-    
-    // Show selection section (where wheels are), hide question section
-    showSection('selectionSection');
-    hideSection('questionSection');
-    hideSection('resultsSection');
-    
-    console.log('[App] Wheels reset complete');
-}
-
-/**
  * Initialize game page
  */
 function initGamePage() {
@@ -460,6 +430,7 @@ function initGamePage() {
     const backHomeBtn = document.getElementById('backHomeBtn');
     if (backHomeBtn) {
         backHomeBtn.addEventListener('click', () => {
+            stopTimer();
             showPage('homePage');
         });
     }
@@ -489,17 +460,13 @@ function initGamePage() {
 async function initApp() {
     console.log('[App] Initializing application...');
     
-    try {
-        // Load questions data
-        await loadQuestionsData();
-        
-        // Initialize game page
-        initGamePage();
-        
-        console.log('[App] Application initialized successfully');
-    } catch (error) {
-        console.error('[App] Initialization error:', error);
-    }
+    // Load questions data
+    await loadQuestionsData();
+    
+    // Initialize game page
+    initGamePage();
+    
+    console.log('[App] Application initialized successfully');
 }
 
 // Initialize on DOM load
@@ -511,7 +478,3 @@ document.addEventListener('DOMContentLoaded', () => {
 window.loadQuestion = loadQuestion;
 window.resetGameState = resetGameState;
 window.gameState = gameState;
-window.startTimer = startTimer;
-window.stopTimer = stopTimer;
-window.updateTimerDisplay = updateTimerDisplay;
-window.handleTimeout = handleTimeout;
