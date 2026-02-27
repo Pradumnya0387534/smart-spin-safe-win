@@ -11,18 +11,124 @@ let gameState = {
     currentPoints: 0,
     usedQuestions: {},
     questionsData: null,
-    timerInterval: null,
-    timeRemaining: 30
-};
+    };
 
 // Constants to change timer 
-const TIMER_DURATION = 30;
-const TIMER_WARNING_THRESHOLD = 10;
-const TIMER_CRITICAL_THRESHOLD = 5;
-
 /**
  * Load questions from JSON file
  */
+async 
+// ===================================
+// TIMER FUNCTIONS
+// ===================================
+
+/**
+ * Start the countdown timer
+ */
+function startTimer() {
+    // Clear any existing timer
+    if (gameState.timerInterval) {
+        clearInterval(gameState.timerInterval);
+    }
+    
+    // Reset timer
+    gameState.timeRemaining = TIMER_DURATION;
+    
+    // Update display
+    updateTimerDisplay();
+    
+    // Start countdown
+    gameState.timerInterval = setInterval(() => {
+        gameState.timeRemaining--;
+        updateTimerDisplay();
+        
+        // Play tick sound in last 5 seconds
+        if (gameState.timeRemaining <= 5 && gameState.timeRemaining > 0) {
+            playSound('timer-tick');
+        }
+        
+        // Check if time's up
+        if (gameState.timeRemaining <= 0) {
+            handleTimeout();
+        }
+    }, 1000);
+    
+    console.log('[Timer] Started - 30 seconds');
+}
+
+/**
+ * Stop the timer
+ */
+function stopTimer() {
+    if (gameState.timerInterval) {
+        clearInterval(gameState.timerInterval);
+        gameState.timerInterval = null;
+        stopSound('timer-tick');
+        console.log('[Timer] Stopped');
+    }
+}
+
+/**
+ * Update timer display
+ */
+function updateTimerDisplay() {
+    const timerNumber = document.getElementById('timerNumber');
+    const timerProgress = document.getElementById('timerProgress');
+    const timerText = document.getElementById('timerText');
+    
+    if (!timerNumber) return;
+    
+    // Update number
+    timerNumber.textContent = gameState.timeRemaining;
+    
+    // Update progress circle
+    if (timerProgress) {
+        const percentage = (gameState.timeRemaining / TIMER_DURATION) * 100;
+        const circumference = 2 * Math.PI * 45; // radius = 45
+        const offset = circumference - (percentage / 100) * circumference;
+        timerProgress.style.strokeDashoffset = offset;
+    }
+    
+    // Update colors based on time remaining
+    if (timerText) {
+        timerText.classList.remove('timer-warning', 'timer-critical');
+        
+        if (gameState.timeRemaining <= TIMER_CRITICAL_THRESHOLD) {
+            timerText.classList.add('timer-critical');
+        } else if (gameState.timeRemaining <= TIMER_WARNING_THRESHOLD) {
+            timerText.classList.add('timer-warning');
+        }
+    }
+}
+
+/**
+ * Handle timer timeout
+ */
+function handleTimeout() {
+    console.log('[Timer] Time is up!');
+    
+    // Stop timer
+    stopTimer();
+    
+    // Play wrong sound
+    playSound('wrong-sound');
+    
+    // Show feedback
+    showFeedback('Time\'s up! ⏰', false);
+    
+    // Disable answer buttons
+    disableAnswerButtons();
+    
+    // Update stats
+    gameState.questionsAnswered++;
+    
+    // Show next button after delay
+    setTimeout(() => {
+        showNextButton();
+    }, 2000);
+}
+
+
 async function loadQuestionsData() {
     try {
         console.log('[App] Loading questions data...');
@@ -101,6 +207,9 @@ function loadQuestion(category, questionNum) {
     // Show question section
     showSection('questionSection');
     
+    // Start timer
+    startTimer();
+    
     // Update question display
     document.getElementById('questionCategoryBadge').textContent = category;
     document.getElementById('questionPointsBadge').textContent = `Q #${questionNum}`;  // was: ${points} pts
@@ -153,11 +262,9 @@ function displayOptions(question) {
  * Start the countdown timer
  */
 
-
 /**
  * Stop the timer
  */
-
 
 /**
  * Handle answer selection
@@ -241,7 +348,6 @@ function handleWrongAnswer(selectedIndex) {
 /**
  * Handle timeout
  */
-
 
 /**
  * Show feedback message
