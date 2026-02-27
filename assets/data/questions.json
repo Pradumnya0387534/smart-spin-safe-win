@@ -506,13 +506,13 @@
         "Parking",
         "Stopping",
         "Decoration",
-         "Safe passage",
+         "Safe passage"
       ],
       "options_mr": [
         "पार्किंग",
         "थांबणे",
         "सजावट",
-        "सुरक्षित मार्ग",
+        "सुरक्षित मार्ग"
       ],
       "correct": 3,
       "points": 100
