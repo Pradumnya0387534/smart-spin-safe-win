@@ -36,10 +36,9 @@
         <source src="https://cdn.pixabay.com/audio/2021/08/04/audio_12b0c7443c.mp3" type="audio/mpeg">
     </audio>
 
-        <audio id="timer-tick" preload="auto">
-        <source src="assets/audio/timer-tick.mp3" type="audio/mpeg">
-        </audio>
-
+    <audio id="timer-background" preload="auto" loop>
+    <source src="assets/audio/timer-tick.mp3" type="audio/mpeg">
+    </audio>
 
 
 
@@ -187,18 +186,15 @@
 
             <!-- Question Section -->
             <div id="questionSection" class="question-section" style="display: none;">
-               <div class="timer-container">
+                <div class="timer-container">
                     <div class="timer-circle">
                         <svg class="timer-svg" viewBox="0 0 100 100">
                             <circle class="timer-bg" cx="50" cy="50" r="45"></circle>
                             <circle id="timerProgress" class="timer-progress" cx="50" cy="50" r="45"></circle>
                         </svg>
-                        <div id="timerText" class="timer-text">
-                            <span id="timerNumber" class="timer-number">30</span>
-                        </div>
+                        <div id="timerText" class="timer-text">30</div>
                     </div>
                 </div>
-
 
                 <div class="question-card">
                     <div class="question-header">
