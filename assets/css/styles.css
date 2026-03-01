@@ -660,10 +660,11 @@ canvas {
     overflow-y: auto;
     display: flex;
     flex-direction: column;
-    width: 100% !important; /* FORCE WIDER - Increased to 90% */
-    max-width: 1300px !important; /* FORCE WIDER - Increased max width */
-    margin: 1rem auto !important; /* Center with minimal margin */
+    width: 92% !important; /* WIDER */
+    max-width: 1250px !important; /* WIDER */
+    margin: 0.5rem auto !important; /* MINIMAL MARGIN */
 }
+
 
 
 .question-header {
@@ -720,18 +721,19 @@ canvas {
 .options-container {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: auto auto;
-    gap: 1rem;
+    grid-template-rows: repeat(2, 1fr);
+    gap: 1.25rem; /* BALANCED GAP */
     margin-bottom: 1.5rem;
     width: 100%;
 }
 
+
 /* OPTIMIZED OPTION BUTTONS */
 .option-btn {
-    min-height: 160px; /* OPTIMIZED: Increased from 100px */
-    max-height: 200px; /* OPTIMIZED: Increased from 140px */
-    padding: 1.5rem; /* OPTIMIZED: Increased padding */
-    font-size: 1.05rem; /* OPTIMIZED: Increased from 0.95rem */
+    min-height: 120px; /* REDUCED from 160px */
+    max-height: 150px; /* REDUCED from 200px */
+    padding: 1.25rem; /* BALANCED PADDING */
+    font-size: 1rem; /* READABLE SIZE */
     line-height: 1.4;
     display: flex;
     align-items: center;
@@ -745,6 +747,7 @@ canvas {
     background: white;
     transition: all 0.3s ease;
 }
+
 
 .option-btn:hover {
     transform: translateY(-2px);
@@ -968,7 +971,7 @@ canvas {
 /* OPTIMIZED FOR 1366×768 SCREENS (YOUR SCREEN) */
 @media (min-width: 1024px) and (max-width: 1366px) {
     .question-card {
-        width: 88%; /* Maximum width for laptop screens */
+        width: 95%; /* Maximum width for laptop screens */
         max-width: 1150px;
         padding: 2rem 2.5rem;
     }
@@ -998,7 +1001,7 @@ canvas {
 /* Large desktop screens */
 @media (min-width: 1367px) {
     .question-card {
-        width: 80%;
+        width: 95%;
         max-width: 1200px;
     }
     
