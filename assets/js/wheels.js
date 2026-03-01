@@ -189,7 +189,7 @@ function drawCategoryWheel() {
     ctx.fillText('ABB', centerX, centerY);
     
     // Draw arrow pointing RIGHT (like backup)
-    drawArrowRight(ctx, centerX, centerY, '#FF000F');
+    // drawArrowRight(ctx, centerX, centerY, '#FF000F'); // Removed - using static HTML pointer
 }
 
 /**
@@ -263,7 +263,7 @@ function drawQuestionWheel() {
     ctx.fillText('ABB', centerX, centerY);
     
     // Draw arrow pointing RIGHT (lilac color like backup)
-    drawArrowRight(ctx, centerX, centerY, '#6764f6');
+    // drawArrowRight(ctx, centerX, centerY, '#6764f6'); // Removed - using static HTML pointer
 }
 
 /**
@@ -273,6 +273,7 @@ function drawQuestionWheel() {
  * @param {number} centerY - Center Y coordinate
  * @param {string} color - Arrow color
  */
+/* DEPRECATED - Now using static HTML pointer
 function drawArrowRight(ctx, centerX, centerY, color) {
     ctx.beginPath();
     ctx.moveTo(centerX + 35, centerY);        // Start from center circle edge
