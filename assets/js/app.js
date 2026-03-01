@@ -138,6 +138,12 @@ function displayOptions(question) {
         button.className = 'option-btn';
         button.dataset.index = index;
         
+        // Add title attribute for accessibility (shows full text on hover)
+        button.title = `${optionEn} / ${optionMr}`;
+        
+        // Add aria-label for screen readers
+        button.setAttribute('aria-label', `Option ${index + 1}: ${optionEn}`);
+        
         button.innerHTML = `
             <span class="option-text option-text-en">${optionEn}</span>
             <span class="option-text option-text-mr">${optionMr}</span>
