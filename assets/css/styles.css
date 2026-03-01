@@ -523,6 +523,67 @@ body {
     gap: 1rem;
 }
 
+
+/* ============================================================================
+   STATIC WHEEL POINTER - Triangular indicator outside wheel
+   ============================================================================ */
+
+.wheel-wrapper {
+    position: relative; /* Ensure pointer can be positioned absolutely */
+}
+
+.wheel-pointer {
+    position: absolute;
+    top: 50%; /* Vertically center to wheel */
+    right: -8px; /* Position outside wheel, 8px from edge */
+    transform: translateY(-50%); /* Center vertically */
+    width: 0;
+    height: 0;
+    
+    /* Create triangle pointing LEFT (inward) using border trick */
+    border-top: 10px solid transparent;    /* Half of base height */
+    border-bottom: 10px solid transparent; /* Half of base height */
+    border-right: 16px solid var(--abb-red-500); /* Triangle pointing left, ABB red */
+    
+    /* Add white border for contrast */
+    filter: drop-shadow(-2px 0 0 white) 
+            drop-shadow(2px 0 0 white) 
+            drop-shadow(0 -2px 0 white) 
+            drop-shadow(0 2px 0 white)
+            drop-shadow(0 0 4px rgba(0, 0, 0, 0.2)); /* Subtle shadow for visibility */
+    
+    /* Ensure pointer doesn't rotate */
+    z-index: 10; /* Above wheel canvas */
+    pointer-events: none; /* Don't interfere with clicks */
+}
+
+/* Alternative implementation using clip-path (more precise triangle) */
+.wheel-pointer-clippath {
+    position: absolute;
+    top: 50%;
+    right: -8px;
+    transform: translateY(-50%);
+    width: 16px;  /* Triangle height (pointing left) */
+    height: 20px; /* Triangle base */
+    background: var(--abb-red-500);
+    clip-path: polygon(100% 0%, 100% 100%, 0% 50%); /* Triangle pointing left */
+    border: 2px solid white;
+    box-shadow: 0 0 4px rgba(0, 0, 0, 0.2);
+    z-index: 10;
+    pointer-events: none;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .wheel-pointer {
+        right: -6px; /* Slightly closer on smaller screens */
+        border-top: 8px solid transparent;
+        border-bottom: 8px solid transparent;
+        border-right: 12px solid var(--abb-red-500);
+    }
+}
+
+
 .wheel-wrapper h3 {
     font-size: 1.3rem;
     color: var(--abb-lilac);
@@ -587,7 +648,7 @@ canvas {
 /* Question Section */
 .question-section {
     width: 100%;
-    max-width: 800px;
+    max-width: 1000px;
     display: flex;
     flex-direction: column;
     gap: 2rem;
