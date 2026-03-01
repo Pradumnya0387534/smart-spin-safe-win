@@ -766,25 +766,53 @@ canvas {
 .options-container {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: repeat(2, 1fr);
+    grid-template-rows: auto auto; /* Auto height for each row */
     gap: 1rem;
     margin-bottom: 1.5rem;
-    max-height: 300px; /* Ensures all 4 options fit on screen */
+    width: 100%;
+    /* No max-height restriction */
 }
 
+/* Option buttons - optimized for 2×2 grid without scrolling */
 .option-btn {
-    padding: 1rem 1.5rem;
-    border: 2px solid var(--gray-300);
-    border-radius: 12px;
-    background: var(--white);
-    cursor: pointer;
-    transition: var(--transition-fast);
-    text-align: left;
+    min-height: 100px;
+    max-height: 140px;
+    padding: 1rem;
+    font-size: 0.95rem;
+    line-height: 1.4;
     display: flex;
-    flex-direction: column;
+    align-items: center;
     justify-content: center;
-    min-height: 120px; /* Consistent height for all options */
-    overflow: hidden; /* Prevent overflow */
+    text-align: center;
+    overflow: hidden;
+    word-wrap: break-word;
+    cursor: pointer;
+    border: 2px solid #ddd;
+    border-radius: 8px;
+    background: white;
+    transition: all 0.3s ease;
+}
+
+.option-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.option-btn.correct {
+    background-color: #4CAF50;
+    color: white;
+    border-color: #4CAF50;
+}
+
+.option-btn.incorrect {
+    background-color: #f44336;
+    color: white;
+    border-color: #f44336;
+}
+
+.option-btn:disabled {
+    cursor: not-allowed;
+    opacity: 0.7;
 }
 
 /* Option text styling with line clamping */
