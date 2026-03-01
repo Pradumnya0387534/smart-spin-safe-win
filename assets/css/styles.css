@@ -660,8 +660,8 @@ canvas {
     overflow-y: auto;
     display: flex;
     flex-direction: column;
-    width: 90% !important; /* FORCE WIDER - Increased to 90% */
-    max-width: 1200px !important; /* FORCE WIDER - Increased max width */
+    width: 100% !important; /* FORCE WIDER - Increased to 90% */
+    max-width: 1300px !important; /* FORCE WIDER - Increased max width */
     margin: 1rem auto !important; /* Center with minimal margin */
 }
 
