@@ -650,6 +650,7 @@ canvas {
 }
 
 /* ===== QUESTION CARD - OPTIMIZED ===== */
+/* Question Card - WIDER */
 .question-card {
     background: var(--white);
     border-radius: 16px;
@@ -659,10 +660,11 @@ canvas {
     overflow-y: auto;
     display: flex;
     flex-direction: column;
-    width: 85%; /* OPTIMIZED: Increased from default */
-    max-width: 1100px; /* OPTIMIZED: Increased from ~800px */
-    margin: 1rem auto; /* OPTIMIZED: Reduced vertical margin */
+    width: 90% !important; /* FORCE WIDER - Increased to 90% */
+    max-width: 1200px !important; /* FORCE WIDER - Increased max width */
+    margin: 1rem auto !important; /* Center with minimal margin */
 }
+
 
 .question-header {
     display: flex;
