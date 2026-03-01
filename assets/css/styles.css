@@ -530,7 +530,7 @@ body {
 
 .wheel-pointer {
     position: absolute;
-    top: 50%;
+    top: 55%;
     right: -8px;
     transform: translateY(-50%);
     width: 0;
