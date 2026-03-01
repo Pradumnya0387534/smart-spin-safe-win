@@ -84,32 +84,36 @@
                     <h1>Smart Spin Safe Win</h1>
                     <p class="home-subtitle">Interactive Safety Quiz Game</p>
                     
-                    <div class="rules-section">
-                        <h3>How to Play:</h3>
-                        <ul class="rules-list">
-                            <li>🎯 Click "Begin Game" to start</li>
-                            <li>🎡 Spin both wheels to select a category and points</li>
-                            <li>❓ Answer safety questions in English and Marathi</li>
-                            <li>⏱️ You have 30 seconds per question</li>
-                            <li>✅ Earn points for correct answers</li>
-                            <li>🏆 Get 2 consecutive correct answers for bonus celebration!</li>
-                            <li>🔄 Click "Reset Game" to start fresh</li>
-                        </ul>
-                    </div>
+                    
+                <div class="rules-section">
+                    <h3>How to Play:</h3>
+                    <ul class="rules-list">
+                        <li>📝 Answer the entry question to begin</li>
+                        <li>🎯 Click "Begin Game"</li>
+                        <li>🎡 Spin both wheels to select a category and question </li>
+                        <li>❓ Answer the question by choosing from the given options</li>
+                        <li>🏆 Get 2 correct answers in a row to earn a reward</li>
+                        <li>🔄 Click "Reset Game" to start fresh</li>
+                    </ul>
+                </div>
 
-                    <div class="categories-preview">
-                        <h3>Safety Categories:</h3>
+
+                <div class="categories-preview">
+                    <h3>Safety Categories (10 Topics):</h3>
                         <div class="category-grid-home">
-                            <div class="category-item-home">⚡ Electrical Safety</div>
-                            <div class="category-item-home">🦺 PPE</div>
-                            <div class="category-item-home">🔥 Fire Safety</div>
-                            <div class="category-item-home">🧪 Chemical Safety</div>
-                            <div class="category-item-home">⚙️ Machine Safety</div>
-                            <div class="category-item-home">🚨 Emergency Response</div>
-                            <div class="category-item-home">🪑 Workplace Ergonomics</div>
-                            <div class="category-item-home">🔒 Lockout/Tagout</div>
+                        <div class="category-item-home">🔥 Fire Safety</div>
+                        <div class="category-item-home">⚡ Electrical Safety</div>
+                        <div class="category-item-home">🚗 Road Safety</div>
+                        <div class="category-item-home">🔒 Lockout Tagout</div>
+                        <div class="category-item-home">📦 Material Handling</div>
+                        <div class="category-item-home">🪜 Working at Height</div>
+                        <div class="category-item-home">🩹 First Aid</div>
+                        <div class="category-item-home">⚙️ Machine Guarding</div>
+                        <div class="category-item-home">🧪 Chemical Safety</div>
+                        <div class="category-item-home">♻️ Sustainability</div>
                         </div>
-                    </div>
+                     <p class="category-note">Each category contains 10 questions in English and Marathi</p>
+                </div>
 
                     <button id="beginGameBtn" class="btn btn-primary btn-large">Begin Game</button>
                     
@@ -128,7 +132,7 @@
                 <img src="assets/img/Designer (1) (1).png" alt="Safety Game" class="home-banner-image" onerror="this.style.display='none'">
                 <div class="home-banner-overlay">
                     <h2>National Safety Week 2026!!</h2>
-                    <p>Learn, Play, and Win with ABB Safety</p>
+                    <p>Engage, Educate & Empower People to Enhance Safety </p>
                 </div>
             </div>
         </div>
@@ -160,10 +164,12 @@
                     <div class="wheel-wrapper">
                         <h3>Category</h3>
                         <canvas id="categoryWheel" width="300" height="300"></canvas>
+                        <div class="wheel-pointer" aria-hidden="true"></div>
                     </div>
                     <div class="wheel-wrapper">
                         <h3>Question Number</h3>
                         <canvas id="questionWheel" width="300" height="300"></canvas>
+                        <div class="wheel-pointer" aria-hidden="true"></div>
                     </div>
                 </div>
                 <button id="spinBtn" class="btn btn-primary btn-large">Spin Both Wheels</button>
