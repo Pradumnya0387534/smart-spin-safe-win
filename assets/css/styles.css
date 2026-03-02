@@ -672,7 +672,7 @@ canvas {
     /* FORCE LEFT SHIFT - MAXIMUM PRIORITY */
     margin-top: clamp(0.5rem, 1vh, 1rem) !important;
     margin-bottom: clamp(0.5rem, 1vh, 1rem) !important;
-    margin-left: 0.5vw;   /* ~4.5px from left edge */
+    margin-left: 0.2vw;   /* ~4.5px from left edge */
     margin-right: 6.5vw;  /* ~58.3px from right edge */
 
     
