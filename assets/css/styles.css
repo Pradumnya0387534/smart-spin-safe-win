@@ -1,6 +1,6 @@
 /* ===================================
    SMART SPIN SAFE WIN - ABB SAFETY QUIZ
-   Complete Styles - SPACE OPTIMIZED
+   Complete Styles - AUTO-SCALING (Universal)
    =================================== */
 
 /* ===== RESET & BASE STYLES ===== */
@@ -178,15 +178,16 @@ body {
 }
 
 .banner-overlay h2 {
-    font-size: 3rem;
+    font-size: clamp(2rem, 5vw, 3rem);
     margin-bottom: 1rem;
     text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.3);
 }
 
 .banner-overlay p {
-    font-size: 1.5rem;
+    font-size: clamp(1rem, 3vw, 1.5rem);
     text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.3);
 }
+
 /* ===== BUTTONS ===== */
 .btn {
     padding: 0.75rem 1.5rem;
@@ -267,13 +268,13 @@ body {
 }
 
 .header-logo {
-    height: 80px;
+    height: clamp(60px, 10vh, 80px);
     margin-right: 20px;
 }
 
 .app-header h1 {
     flex: 1;
-    font-size: 1.5rem;
+    font-size: clamp(1.2rem, 3vw, 1.5rem);
     color: var(--abb-red);
     text-align: center;
     margin-right: 200px;
@@ -298,8 +299,9 @@ body {
 }
 
 .score-value {
-    font-size: 1.2rem;
+    font-size: clamp(1rem, 2vw, 1.2rem);
 }
+
 /* ===== HOME PAGE SPLIT-SCREEN LAYOUT ===== */
 .home-split-container {
     display: flex;
@@ -335,13 +337,13 @@ body {
 }
 
 .home-logo {
-    width: 300px;
+    width: clamp(200px, 40vw, 300px);
     height: auto;
     margin-bottom: 1.5rem;
 }
 
 .home-card h1 {
-    font-size: 2rem;
+    font-size: clamp(1.5rem, 4vw, 2rem);
     color: var(--abb-red);
     margin-bottom: 0.5rem;
 }
@@ -349,7 +351,7 @@ body {
 .home-subtitle {
     color: var(--gray-700);
     margin-bottom: 2rem;
-    font-size: 1.1rem;
+    font-size: clamp(0.95rem, 2vw, 1.1rem);
 }
 
 .rules-section {
@@ -357,7 +359,7 @@ body {
 }
 
 .rules-section h3 {
-    font-size: 1.3rem;
+    font-size: clamp(1.1rem, 2.5vw, 1.3rem);
     color: var(--abb-lilac);
     margin-bottom: 1rem;
 }
@@ -373,7 +375,7 @@ body {
     padding: 0.75rem;
     background: var(--gray-100);
     border-radius: 8px;
-    font-size: 0.95rem;
+    font-size: clamp(0.85rem, 1.5vw, 0.95rem);
 }
 
 .categories-preview {
@@ -381,7 +383,7 @@ body {
 }
 
 .categories-preview h3 {
-    font-size: 1.3rem;
+    font-size: clamp(1.1rem, 2.5vw, 1.3rem);
     color: var(--abb-lilac);
     margin-bottom: 1rem;
 }
@@ -396,7 +398,7 @@ body {
     padding: 0.75rem;
     background: var(--abb-lilac-2);
     border-radius: 8px;
-    font-size: 0.85rem;
+    font-size: clamp(0.75rem, 1.5vw, 0.85rem);
     text-align: center;
     font-weight: 600;
     transition: var(--transition-fast);
@@ -436,30 +438,31 @@ body {
 }
 
 .home-banner-overlay h2 {
-    font-size: 3rem;
+    font-size: clamp(2rem, 5vw, 3rem);
     margin-bottom: 1rem;
     text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.3);
 }
 
 .home-banner-overlay p {
-    font-size: 1.5rem;
+    font-size: clamp(1rem, 3vw, 1.5rem);
     text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.3);
 }
-/* ===== GAME PAGE - OPTIMIZED ===== */
+
+/* ===== GAME PAGE - AUTO-SCALING ===== */
 .game-content {
     flex: 1;
-    padding: 1rem 2rem; /* OPTIMIZED: Reduced from 2rem */
+    padding: clamp(0.5rem, 2vw, 1rem) clamp(1rem, 3vw, 2rem);
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 1.5rem; /* OPTIMIZED: Reduced from 2rem */
+    gap: clamp(1rem, 2vh, 1.5rem);
 }
 
 /* Wheels Section */
 .wheels-section {
     background: var(--white);
     border-radius: 16px;
-    padding: 2rem;
+    padding: clamp(1.5rem, 3vw, 2rem);
     box-shadow: var(--shadow-lg);
     text-align: center;
     width: 100%;
@@ -467,7 +470,7 @@ body {
 }
 
 .wheels-section h2 {
-    font-size: 2rem;
+    font-size: clamp(1.5rem, 4vw, 2rem);
     color: var(--abb-red);
     margin-bottom: 2rem;
 }
@@ -475,7 +478,7 @@ body {
 .wheels-container {
     display: flex;
     justify-content: center;
-    gap: 3rem;
+    gap: clamp(2rem, 5vw, 3rem);
     margin-bottom: 2rem;
 }
 
@@ -508,7 +511,7 @@ body {
 }
 
 .wheel-wrapper h3 {
-    font-size: 1.3rem;
+    font-size: clamp(1.1rem, 2.5vw, 1.3rem);
     color: var(--abb-lilac);
 }
 
@@ -526,13 +529,13 @@ canvas {
 .selection-card {
     background: var(--white);
     border-radius: 16px;
-    padding: 2rem;
+    padding: clamp(1.5rem, 3vw, 2rem);
     box-shadow: var(--shadow-lg);
     text-align: center;
 }
 
 .selection-card h3 {
-    font-size: 1.5rem;
+    font-size: clamp(1.3rem, 3vw, 1.5rem);
     color: var(--abb-lilac);
     margin-bottom: 1.5rem;
 }
@@ -546,37 +549,38 @@ canvas {
 }
 
 .category-icon-large {
-    font-size: 4rem;
+    font-size: clamp(3rem, 8vw, 4rem);
 }
 
 .selected-category span:last-child {
-    font-size: 1.8rem;
+    font-size: clamp(1.5rem, 4vw, 1.8rem);
     font-weight: 700;
     color: var(--abb-red);
 }
 
 .selected-points {
-    padding: 1rem 2rem;
+    padding: clamp(0.75rem, 2vw, 1rem) clamp(1.5rem, 3vw, 2rem);
     background: linear-gradient(135deg, var(--abb-red) 0%, var(--abb-lilac) 100%);
     color: var(--white);
     border-radius: 12px;
-    font-size: 1.5rem;
+    font-size: clamp(1.2rem, 3vw, 1.5rem);
     font-weight: 700;
 }
 
 .points-label {
     margin-right: 0.5rem;
 }
-/* ===== QUESTION SECTION - OPTIMIZED ===== */
+
+/* ===== QUESTION SECTION - AUTO-SCALING ===== */
 .question-section {
     width: 100%;
     max-width: 800px;
     display: flex;
     flex-direction: column;
-    gap: 2rem;
+    gap: clamp(1.5rem, 3vh, 2rem);
 }
 
-/* Timer */
+/* Timer - Auto-scaling */
 .timer-container {
     display: flex;
     justify-content: center;
@@ -584,8 +588,8 @@ canvas {
 
 .timer-circle {
     position: relative;
-    width: 120px;
-    height: 120px;
+    width: clamp(100px, 15vw, 120px);
+    height: clamp(100px, 15vw, 120px);
 }
 
 .timer-svg {
@@ -615,7 +619,7 @@ canvas {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    font-size: 3rem; /* OPTIMIZED: Increased from 2.5rem */
+    font-size: clamp(2rem, 5vw, 3rem);
     font-weight: 700;
     color: var(--abb-lilac);
 }
@@ -649,23 +653,23 @@ canvas {
     50% { transform: rotate(-90deg) scale(1.1); }
 }
 
-/* ===== QUESTION CARD - OPTIMIZED ===== */
-/* Question Card - WIDER */
+/* ===== QUESTION CARD - AUTO-SCALING (UNIVERSAL) ===== */
 .question-card {
     background: var(--white);
     border-radius: 16px;
-    padding: 2rem;
+    padding: clamp(1.5rem, 3vw, 2rem);
     box-shadow: var(--shadow-lg);
     max-height: calc(100vh - 200px);
     overflow-y: auto;
     display: flex;
     flex-direction: column;
-    width: 92% !important; /* WIDER */
-    max-width: 1250px !important; /* WIDER */
-    margin: 0.5rem auto !important; /* MINIMAL MARGIN */
+    
+    /* AUTO-SCALING WIDTH - Works on ALL devices */
+    width: clamp(300px, 93vw, 1400px) !important;
+    /* Min: 300px (phones), Preferred: 93% viewport, Max: 1400px (large screens) */
+    
+    margin: clamp(0.5rem, 1vh, 1rem) auto !important;
 }
-
-
 
 .question-header {
     display: flex;
@@ -679,18 +683,19 @@ canvas {
 .category-badge {
     background: var(--abb-lilac-2);
     color: var(--abb-lilac);
-    padding: 0.75rem 1.5rem; /* OPTIMIZED: Increased padding */
+    padding: clamp(0.5rem, 1.5vw, 0.75rem) clamp(1rem, 2vw, 1.5rem);
     border-radius: 20px;
     font-weight: 600;
-    font-size: 1rem; /* OPTIMIZED: Increased from default */
+    font-size: clamp(0.9rem, 1.5vw, 1rem);
 }
 
 .points-badge {
     background: var(--abb-red-2);
     color: var(--abb-red);
-    padding: 0.5rem 1rem;
+    padding: clamp(0.5rem, 1.5vw, 0.75rem) clamp(1rem, 2vw, 1.5rem);
     border-radius: 20px;
     font-weight: 600;
+    font-size: clamp(0.9rem, 1.5vw, 1rem);
 }
 
 .question-text {
@@ -699,7 +704,7 @@ canvas {
 
 .question-lang {
     margin-bottom: 1rem;
-    padding: 1rem;
+    padding: clamp(0.75rem, 2vw, 1rem);
     background: var(--gray-100);
     border-radius: 8px;
 }
@@ -709,31 +714,31 @@ canvas {
     font-weight: 700;
     color: var(--abb-red);
     margin-bottom: 0.5rem;
-    font-size: 0.9rem;
+    font-size: clamp(0.85rem, 1.5vw, 0.9rem);
 }
 
 .question-lang p {
-    font-size: 1.25rem; /* OPTIMIZED: Increased from 1.1rem */
+    font-size: clamp(1rem, 2vw, 1.25rem);
     line-height: 1.6;
     color: var(--gray-900);
 }
-/* ===== OPTIONS - OPTIMIZED ===== */
+
+/* ===== OPTIONS - AUTO-SCALING ===== */
 .options-container {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: repeat(2, 1fr);
-    gap: 1.25rem; /* BALANCED GAP */
+    gap: clamp(0.75rem, 2vw, 1.25rem);
     margin-bottom: 1.5rem;
     width: 100%;
 }
 
-
-/* OPTIMIZED OPTION BUTTONS */
+/* AUTO-SCALING OPTION BUTTONS */
 .option-btn {
-    min-height: 120px; /* REDUCED from 160px */
-    max-height: 150px; /* REDUCED from 200px */
-    padding: 1.25rem; /* BALANCED PADDING */
-    font-size: 1rem; /* READABLE SIZE */
+    min-height: clamp(100px, 15vh, 130px);
+    max-height: clamp(130px, 18vh, 160px);
+    padding: clamp(1rem, 2vw, 1.25rem);
+    font-size: clamp(0.9rem, 1.5vw, 1rem);
     line-height: 1.4;
     display: flex;
     align-items: center;
@@ -748,22 +753,24 @@ canvas {
     transition: all 0.3s ease;
 }
 
-
 .option-btn:hover {
     transform: translateY(-2px);
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-color: var(--abb-lilac);
 }
 
 .option-btn.correct {
     background-color: #4CAF50;
     color: white;
     border-color: #4CAF50;
+    animation: correct-pulse 0.5s ease;
 }
 
 .option-btn.incorrect {
     background-color: #f44336;
     color: white;
     border-color: #f44336;
+    animation: wrong-shake 0.5s ease;
 }
 
 .option-btn:disabled {
@@ -776,39 +783,26 @@ canvas {
     overflow: hidden;
     text-overflow: ellipsis;
     display: -webkit-box;
-    -webkit-line-clamp: 2;
+    -webkit-line-clamp: 3;
     -webkit-box-orient: vertical;
     line-height: 1.4;
 }
 
 .option-text-en {
-    font-size: 1rem;
+    font-size: clamp(0.9rem, 1.5vw, 1rem);
     font-weight: 500;
     color: var(--gray-900);
     margin-bottom: 0.25rem;
 }
 
 .option-text-mr {
-    font-size: 0.9rem;
+    font-size: clamp(0.85rem, 1.3vw, 0.9rem);
     color: var(--gray-600);
-}
-
-.option-btn:hover:not(:disabled) {
-    border-color: var(--abb-lilac);
-    background: var(--abb-lilac-2);
-    transform: translateX(8px);
-}
-
-.option-btn.correct {
-    border-color: var(--success);
-    background: #d4edda;
-    animation: correct-pulse 0.5s ease;
 }
 
 .option-btn.wrong {
     border-color: var(--danger);
     background: #f8d7da;
-    animation: wrong-shake 0.5s ease;
 }
 
 .option-btn.timeout {
@@ -833,16 +827,17 @@ canvas {
     50% { opacity: 0.5; }
     100% { opacity: 1; }
 }
+
 /* ===== FEEDBACK SECTION ===== */
 .feedback-section {
     text-align: center;
-    padding: 1.5rem;
+    padding: clamp(1rem, 2vw, 1.5rem);
     border-radius: 12px;
     margin-top: 1.5rem;
 }
 
 .feedback-message {
-    font-size: 1.3rem;
+    font-size: clamp(1.1rem, 2.5vw, 1.3rem);
     font-weight: 600;
     margin-bottom: 1.5rem;
 }
@@ -855,7 +850,7 @@ canvas {
 .feedback-section.correct::before {
     content: '✓';
     display: block;
-    font-size: 4rem;
+    font-size: clamp(3rem, 8vw, 4rem);
     margin-bottom: 1rem;
     animation: checkmark-appear 0.5s ease;
 }
@@ -868,7 +863,7 @@ canvas {
 .feedback-section.wrong::before {
     content: '✗';
     display: block;
-    font-size: 4rem;
+    font-size: clamp(3rem, 8vw, 4rem);
     margin-bottom: 1rem;
     animation: x-appear 0.5s ease;
 }
@@ -881,7 +876,7 @@ canvas {
 .feedback-section.timeout::before {
     content: '⏱️';
     display: block;
-    font-size: 4rem;
+    font-size: clamp(3rem, 8vw, 4rem);
     margin-bottom: 1rem;
     animation: timeout-appear 0.5s ease;
 }
@@ -921,26 +916,26 @@ canvas {
 .congrats-content {
     background: var(--white);
     border-radius: 24px;
-    padding: 3rem;
+    padding: clamp(2rem, 5vw, 3rem);
     text-align: center;
     max-width: 500px;
     animation: congrats-bounce 0.6s ease;
 }
 
 .congrats-animation {
-    font-size: 6rem;
+    font-size: clamp(4rem, 10vw, 6rem);
     margin-bottom: 1rem;
     animation: congrats-spin 1s ease infinite;
 }
 
 .congrats-content h2 {
-    font-size: 2.5rem;
+    font-size: clamp(2rem, 5vw, 2.5rem);
     color: var(--abb-red);
     margin-bottom: 1rem;
 }
 
 .congrats-content p {
-    font-size: 1.3rem;
+    font-size: clamp(1.1rem, 2.5vw, 1.3rem);
     color: var(--gray-700);
     margin-bottom: 0.5rem;
 }
@@ -966,135 +961,31 @@ canvas {
     25% { transform: rotate(-10deg); }
     75% { transform: rotate(10deg); }
 }
-/* ===== RESPONSIVE DESIGN - OPTIMIZED ===== */
 
-/* OPTIMIZED FOR 1366×768 SCREENS (YOUR SCREEN) */
-@media (min-width: 1024px) and (max-width: 1366px) {
-    .question-card {
-        width: 95%; /* Maximum width for laptop screens */
-        max-width: 1150px;
-        padding: 2rem 2.5rem;
-    }
-    
-    .option-btn {
-        min-height: 170px;
-        max-height: 210px;
-        font-size: 1.1rem;
-        padding: 1.75rem;
-    }
-    
-    .question-lang p {
-        font-size: 1.3rem;
-    }
-    
-    .timer-text {
-        font-size: 3.5rem;
-    }
-    
-    .category-badge,
-    .points-badge {
-        font-size: 1.05rem;
-        padding: 0.85rem 1.75rem;
-    }
-}
+/* ===== RESPONSIVE DESIGN - MINIMAL (Only for Layout Changes) ===== */
 
-/* Large desktop screens */
-@media (min-width: 1367px) {
-    .question-card {
-        width: 95%;
-        max-width: 1200px;
-    }
-    
-    .option-btn {
-        min-height: 180px;
-        max-height: 220px;
-        font-size: 1.15rem;
-    }
-    
-    .question-lang p {
-        font-size: 1.35rem;
-    }
-}
-
-/* Tablet optimization */
-@media (max-width: 1023px) and (min-width: 769px) {
-    .question-card {
-        width: 90%;
-    }
-    
-    .option-btn {
-        min-height: 140px;
-        max-height: 180px;
-        font-size: 1rem;
-    }
-}
-
-/* Responsive grid layout for options */
-@media (max-width: 991px) {
-    .options-container {
-        grid-template-columns: repeat(2, 1fr);
-        grid-template-rows: auto;
-        max-height: 400px;
-    }
-    
-    .option-btn {
-        min-height: 100px;
-        font-size: 0.95rem;
-    }
-}
-
-@media (max-width: 768px) {
-    .options-container {
-        grid-template-columns: repeat(2, 1fr);
-        gap: 0.75rem;
-        max-height: 350px;
-    }
-    
-    .option-btn {
-        min-height: 90px;
-        padding: 0.75rem 1rem;
-    }
-    
-    .option-text-en {
-        font-size: 0.9rem;
-    }
-    
-    .option-text-mr {
-        font-size: 0.85rem;
-    }
-    
-    .wheel-pointer {
-        right: -6px;
-        border-top: 8px solid transparent;
-        border-bottom: 8px solid transparent;
-        border-right: 12px solid #FF000F;
-    }
-}
-
+/* Mobile - Single column for options */
 @media (max-width: 600px) {
-    .login-container.active {
+    .login-container.active,
+    .home-split-container {
         flex-direction: column !important;
     }
     
     .login-left,
-    .login-right {
+    .login-right,
+    .home-left,
+    .home-right {
         flex: 1 1 auto;
     }
     
-    .login-right {
+    .login-right,
+    .home-right {
         min-height: 200px;
     }
     
-    .banner-overlay h2 {
-        font-size: 2rem;
-    }
-    
-    .banner-overlay p {
-        font-size: 1rem;
-    }
-    
-    .category-grid {
-        grid-template-columns: repeat(2, 1fr);
+    .options-container {
+        grid-template-columns: 1fr;
+        grid-template-rows: auto;
     }
     
     .wheels-container {
@@ -1108,51 +999,18 @@ canvas {
     }
     
     .app-header h1 {
-        font-size: 1.2rem;
-    }
-    
-    .welcome-card {
-        padding: 1.5rem;
-    }
-    
-    .welcome-card h2 {
-        font-size: 1.8rem;
-    }
-    
-    .options-container {
-        grid-template-columns: 1fr;
-        max-height: none;
-        overflow-y: auto;
-        max-height: 400px;
-    }
-    
-    .option-btn {
-        min-height: 80px;
-    }
-    
-    .home-split-container {
-        flex-direction: column;
-    }
-    
-    .home-left,
-    .home-right {
-        flex: 1 1 auto;
-    }
-    
-    .home-right {
-        min-height: 300px;
-    }
-    
-    .home-banner-overlay h2 {
-        font-size: 2rem;
-    }
-    
-    .home-banner-overlay p {
-        font-size: 1rem;
+        margin-right: 0;
     }
     
     .category-grid-home {
         grid-template-columns: 1fr;
+    }
+    
+    .wheel-pointer {
+        right: -6px;
+        border-top: 8px solid transparent;
+        border-bottom: 8px solid transparent;
+        border-right: 12px solid #FF000F;
     }
 }
 
