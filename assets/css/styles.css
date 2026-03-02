@@ -669,6 +669,7 @@ canvas {
     /* Min: 300px (phones), Preferred: 93% viewport, Max: 1400px (large screens) */
     
     margin: clamp(0.5rem, 1vh, 1rem) auto !important;
+    transform: translateX(-2%);
 }
 
 .question-header {
