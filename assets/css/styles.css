@@ -584,7 +584,6 @@ canvas {
 .timer-container {
     display: flex;
     justify-content: center;
-    align-self: center !important;
 }
 
 .timer-circle {
@@ -963,6 +962,21 @@ canvas {
     25% { transform: rotate(-10deg); }
     75% { transform: rotate(10deg); }
 }
+
+
+/* ===== CENTER EVERYTHING EXCEPT QUESTION CARD ===== */
+
+/* Center timer, wheels, and selection */
+.timer-container,
+.wheels-section,
+.selection-section {
+    align-self: center !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+}
+
+/* Question section stays left (no override needed) */
+/* .question-section uses default flex-start from parent */
 
 /* ===== RESPONSIVE DESIGN - MINIMAL (Only for Layout Changes) ===== */
 
