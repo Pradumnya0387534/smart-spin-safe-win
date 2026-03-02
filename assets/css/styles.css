@@ -454,7 +454,7 @@ body {
     padding: clamp(0.5rem, 2vw, 1rem) clamp(1rem, 3vw, 2rem);
     display: flex;
     flex-direction: column;
-    align-items: center;
+    align-items: flex-start;
     gap: clamp(1rem, 2vh, 1.5rem);
 }
 
@@ -961,33 +961,6 @@ canvas {
     0%, 100% { transform: rotate(0deg); }
     25% { transform: rotate(-10deg); }
     75% { transform: rotate(10deg); }
-}
-
-
-/* ===== OPTION LABELS (A, B, C, D) ===== */
-
-.option-btn {
-    position: relative !important;
-    padding-left: clamp(3rem, 5vw, 4rem) !important;
-}
-
-.option-label {
-    position: absolute;
-    left: clamp(0.75rem, 1.5vw, 1rem);
-    top: 50%;
-    transform: translateY(-50%);
-    width: clamp(2rem, 3vw, 2.5rem);
-    height: clamp(2rem, 3vw, 2.5rem);
-    background: linear-gradient(135deg, var(--abb-red) 0%, var(--abb-lilac) 100%);
-    color: var(--white);
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-weight: 700;
-    font-size: clamp(1rem, 2vw, 1.2rem);
-    flex-shrink: 0;
-    z-index: 1;
 }
 
 /* ===== RESPONSIVE DESIGN - MINIMAL (Only for Layout Changes) ===== */
