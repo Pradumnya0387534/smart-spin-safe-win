@@ -480,11 +480,6 @@ document.addEventListener('DOMContentLoaded', () => {
     initApp();
 });
 
-// Export functions to global scope
-window.loadQuestion = loadQuestion;
-window.resetGameState = resetGameState;
-window.gameState = gameState;
-
 // ===== FORCE QUESTION CARD TO THE LEFT =====
 function forceCardPositioning() {
     const card = document.querySelector('.question-card');
@@ -515,3 +510,9 @@ const observer = new MutationObserver(() => {
     }
 });
 observer.observe(document.body, { childList: true, subtree: true });
+
+// Export functions to global scope
+window.loadQuestion = loadQuestion;
+window.resetGameState = resetGameState;
+window.gameState = gameState;
+
