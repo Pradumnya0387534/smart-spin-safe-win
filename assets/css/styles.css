@@ -672,8 +672,9 @@ canvas {
     /* FORCE LEFT SHIFT - MAXIMUM PRIORITY */
     margin-top: clamp(0.5rem, 1vh, 1rem) !important;
     margin-bottom: clamp(0.5rem, 1vh, 1rem) !important;
-    margin-left: 1.5vw !important;
-    margin-right: 5.5vw !important;
+    margin-left: 0.5vw;   /* ~4.5px from left edge */
+    margin-right: 6.5vw;  /* ~58.3px from right edge */
+
     
     /* ADDITIONAL FORCE - Use transform as backup */
     position: relative !important;
