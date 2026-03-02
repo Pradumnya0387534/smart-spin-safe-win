@@ -7,7 +7,8 @@
 * {
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
+    box-sizing: border-box
+   ;
 }
 
 :root {
@@ -659,8 +660,7 @@ canvas {
     border-radius: 16px;
     padding: clamp(1.5rem, 3vw, 2rem);
     box-shadow: var(--shadow-lg);
-    max-height: calc(100vh - 200px);
-    overflow-y: auto;
+     overflow-y: visible;  
     display: flex;
     flex-direction: column;
     width: clamp(300px, 93vw, 1400px) !important;
