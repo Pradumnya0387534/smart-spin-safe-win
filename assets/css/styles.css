@@ -655,38 +655,36 @@ canvas {
 
 /* ===== QUESTION CARD - AUTO-SCALING (PERFECTLY CENTERED) ===== */
 .question-card {
-    background: var(--white) !important;
-    border-radius: 16px !important;
-    padding: clamp(1.5rem, 3vw, 2rem) !important;
-    box-shadow: var(--shadow-lg) !important;
-    max-height: calc(100vh - 200px) !important;
-    overflow-y: auto !important;
-    display: flex !important;
-    flex-direction: column !important;
+  background: var(--white) !important;
+  border-radius: 16px !important;
+  padding: clamp(1.5rem, 3vw, 2rem) !important;
+  box-shadow: var(--shadow-lg) !important;
+  max-height: calc(100vh - 200px) !important;
+  overflow-y: auto !important;
+  display: flex !important;
+  flex-direction: column !important;
 
-    /* FORCE WIDTH */
-    width: clamp(300px, 93vw, 1400px) !important;
-    min-width: 300px !important;
-    max-width: 1400px !important;
+  /* WIDTH CONSTRAINTS */
+  width: clamp(300px, 93vw, 1400px) !important;
+  min-width: 300px !important;
+  max-width: 1400px !important;
 
-    /* EXISTING MARGINS */
-    margin-top: clamp(0.5rem, 1vh, 1rem) !important;
-    margin-bottom: clamp(0.5rem, 1vh, 1rem) !important;
+  /* VERTICAL SPACING */
+  margin-top: clamp(0.5rem, 1vh, 1rem) !important;
+  margin-bottom: clamp(0.5rem, 1vh, 1rem) !important;
 
-    /* NEW ADDITIONS */
-    margin-left: auto !important;   /* Center horizontally */
-    margin-right: auto !important;
-    margin: auto !important;        /* Forces auto on all sides */
+  /* LEFT ALIGN (final) */
+  margin-left: 0 !important;
+  margin-right: auto !important;
 
-    /* SHIFT LEFT BY 3% */
-    transform: translateX(-3%) !important;
+  /* Optional nudge further left */
+  transform: translateX(-3%) !important;
 
-    /* POSITIONING */
-    position: relative !important;
-    left: 0 !important;
-    right: 0 !important;
+  /* POSITIONING SAFEGUARDS */
+  position: relative !important;
+  left: 0 !important;
+  right: 0 !important;
 }
-
 
 
 .question-header {
