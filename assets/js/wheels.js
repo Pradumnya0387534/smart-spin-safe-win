@@ -4,7 +4,7 @@
 // ===================================
 
 // Configuration
-const WHEEL_RADIUS = 140;  // Match backup radius
+const WHEEL_RADIUS = 200;  // Match backup radius
 const CENTER_CIRCLE_RADIUS = 30;
 const ARROW_LENGTH = 30;
 
