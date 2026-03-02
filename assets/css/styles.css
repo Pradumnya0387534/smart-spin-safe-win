@@ -655,19 +655,30 @@ canvas {
 
 /* ===== QUESTION CARD - AUTO-SCALING (PERFECTLY CENTERED) ===== */
 .question-card {
-    background: var(--white);
-    border-radius: 16px;
-    padding: clamp(1.5rem, 3vw, 2rem);
-    box-shadow: var(--shadow-lg);
-    max-height: calc(100vh - 200px);
-    overflow-y: auto;
-    display: flex;
-    flex-direction: column;
+    background: var(--white) !important;
+    border-radius: 16px !important;
+    padding: clamp(1.5rem, 3vw, 2rem) !important;
+    box-shadow: var(--shadow-lg) !important;
+    max-height: calc(100vh - 200px) !important;
+    overflow-y: auto !important;
+    display: flex !important;
+    flex-direction: column !important;
+    
+    /* FORCE WIDTH - MAXIMUM PRIORITY */
     width: clamp(300px, 93vw, 1400px) !important;
+    min-width: 300px !important;
+    max-width: 1400px !important;
+    
+    /* FORCE LEFT SHIFT - MAXIMUM PRIORITY */
     margin-top: clamp(0.5rem, 1vh, 1rem) !important;
     margin-bottom: clamp(0.5rem, 1vh, 1rem) !important;
     margin-left: 1.5vw !important;
     margin-right: 5.5vw !important;
+    
+    /* ADDITIONAL FORCE - Use transform as backup */
+    position: relative !important;
+    left: 0 !important;
+    right: 0 !important;
 }
 
 
