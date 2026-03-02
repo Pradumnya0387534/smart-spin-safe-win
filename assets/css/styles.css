@@ -653,7 +653,7 @@ canvas {
     50% { transform: rotate(-90deg) scale(1.1); }
 }
 
-/* ===== QUESTION CARD - AUTO-SCALING (UNIVERSAL) ===== */
+/* ===== QUESTION CARD - AUTO-SCALING (PERFECTLY CENTERED) ===== */
 .question-card {
     background: var(--white);
     border-radius: 16px;
@@ -666,14 +666,14 @@ canvas {
     
     /* AUTO-SCALING WIDTH - Works on ALL devices */
     width: clamp(300px, 93vw, 1400px) !important;
-    /* Min: 300px (phones), Preferred: 93% viewport, Max: 1400px (large screens) */
     
-    margin: clamp(0.5rem, 1vh, 1rem) auto !important;
+    /* PERFECT MATHEMATICAL CENTER - Auto-calculates equal margins */
     margin-left: calc((100vw - clamp(300px, 93vw, 1400px)) / 2) !important;
     margin-right: calc((100vw - clamp(300px, 93vw, 1400px)) / 2) !important;
     margin-top: clamp(0.5rem, 1vh, 1rem) !important;
     margin-bottom: clamp(0.5rem, 1vh, 1rem) !important;
 }
+
 
 .question-header {
     display: flex;
