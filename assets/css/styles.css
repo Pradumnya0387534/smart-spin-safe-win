@@ -454,10 +454,9 @@ body {
     padding: clamp(0.5rem, 2vw, 1rem) clamp(1rem, 3vw, 2rem);
     display: flex;
     flex-direction: column;
-    align-items: flex-start;  ← CHANGE FROM 'center' TO 'flex-start'
+    align-items: flex-start;
     gap: clamp(1rem, 2vh, 1.5rem);
 }
-
 
 /* Wheels Section */
 .wheels-section {
@@ -655,43 +654,21 @@ canvas {
 }
 
 /* ===== QUESTION CARD - AUTO-SCALING (PERFECTLY CENTERED) ===== */
-/* ===== QUESTION CARD - LEFT-ALIGNED ===== */
 .question-card {
-  background: var(--white) !important;
-  border-radius: 16px !important;
-  padding: clamp(1.5rem, 3vw, 2rem) !important;
-  box-shadow: var(--shadow-lg) !important;
-  max-height: calc(100vh - 200px) !important;
-  overflow-y: auto !important;
-  display: flex !important;
-  flex-direction: column !important;
-
-  /* WIDTH CONSTRAINTS */
-  width: clamp(300px, 93vw, 1400px) !important;
-  min-width: 300px !important;
-  max-width: 1400px !important;
-
-  /* VERTICAL SPACING */
-  margin-top: clamp(0.5rem, 1vh, 1rem) !important;
-  margin-bottom: clamp(0.5rem, 1vh, 1rem) !important;
-
-  /* FINAL LEFT ALIGNMENT */
-  margin-left: 0 !important;      /* anchor to the left edge of the parent content box */
-  margin-right: auto !important;  /* consume remaining space on the right */
-
-  /* If the parent is flex or grid, this forces left alignment */
-  align-self: flex-start !important;  /* flex parents */
-  justify-self: start !important;     /* grid parents */
-
-  /* POSITIONING SAFEGUARDS */
-  position: relative !important;
-  left: 0 !important;
-  right: 0 !important;
-
-  /* Remove any previous centering or nudging */
-  transform: none !important;  /* <— set to none; add translateX(-3%) if you still want a small left nudge */
+    background: var(--white);
+    border-radius: 16px;
+    padding: clamp(1.5rem, 3vw, 2rem);
+    box-shadow: var(--shadow-lg);
+    max-height: calc(100vh - 200px);
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+    width: clamp(300px, 93vw, 1400px) !important;
+    margin-top: clamp(0.5rem, 1vh, 1rem) !important;
+    margin-bottom: clamp(0.5rem, 1vh, 1rem) !important;
+    margin-left: 1.5vw !important;
+    margin-right: 5.5vw !important;
 }
-
 
 
 
@@ -985,6 +962,26 @@ canvas {
     25% { transform: rotate(-10deg); }
     75% { transform: rotate(10deg); }
 }
+
+
+
+/* ===== OVERRIDE: CENTER TIMER & WHEELS ===== */
+/* Keep timer and wheels centered while question card stays left */
+
+.timer-container,
+.wheels-section,
+.selection-section {
+    align-self: center !important;  /* Override parent's flex-start */
+    margin-left: auto !important;
+    margin-right: auto !important;
+}
+
+/* Keep question section left-aligned */
+.question-section {
+    align-self: flex-start !important;
+    width: 100% !important;
+}
+
 
 /* ===== RESPONSIVE DESIGN - MINIMAL (Only for Layout Changes) ===== */
 
