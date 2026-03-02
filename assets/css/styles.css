@@ -584,6 +584,7 @@ canvas {
 .timer-container {
     display: flex;
     justify-content: center;
+    align-self: center !important;
 }
 
 .timer-circle {
