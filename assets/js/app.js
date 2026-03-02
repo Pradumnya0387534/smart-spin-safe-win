@@ -131,6 +131,7 @@ function displayOptions(question) {
     
     container.innerHTML = '';
     
+    const labels = ['A', 'B', 'C', 'D'];  // Option labels
     question.options_en.forEach((optionEn, index) => {
         const optionMr = question.options_mr[index];
         
@@ -145,6 +146,7 @@ function displayOptions(question) {
         button.setAttribute('aria-label', `Option ${index + 1}: ${optionEn}`);
         
         button.innerHTML = `
+            <span class="option-label">${labels[index]}</span>
             <span class="option-text option-text-en">${optionEn}</span>
             <span class="option-text option-text-mr">${optionMr}</span>
         `;
@@ -480,39 +482,7 @@ document.addEventListener('DOMContentLoaded', () => {
     initApp();
 });
 
-// ===== FORCE QUESTION CARD TO THE LEFT =====
-function forceCardPositioning() {
-    const card = document.querySelector('.question-card');
-    if (card) {
-        card.style.setProperty('margin-left', '0.5vw', 'important');
-        card.style.setProperty('margin-right', '6.5vw', 'important');
-        console.log('✅ Card forced to left');
-    }
-}
-
-// Run when question is displayed
-const originalDisplayQuestion = window.displayQuestion;
-if (originalDisplayQuestion) {
-    window.displayQuestion = function(...args) {
-        const result = originalDisplayQuestion.apply(this, args);
-        setTimeout(forceCardPositioning, 100);
-        return result;
-    };
-}
-
-// Run on page load
-document.addEventListener('DOMContentLoaded', forceCardPositioning);
-
-// Watch for card appearing
-const observer = new MutationObserver(() => {
-    if (document.querySelector('.question-card')) {
-        forceCardPositioning();
-    }
-});
-observer.observe(document.body, { childList: true, subtree: true });
-
 // Export functions to global scope
 window.loadQuestion = loadQuestion;
 window.resetGameState = resetGameState;
 window.gameState = gameState;
-
