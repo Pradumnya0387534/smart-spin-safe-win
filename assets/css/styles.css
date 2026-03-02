@@ -654,6 +654,7 @@ canvas {
 }
 
 /* ===== QUESTION CARD - AUTO-SCALING (PERFECTLY CENTERED) ===== */
+/* ===== QUESTION CARD - LEFT-ALIGNED ===== */
 .question-card {
   background: var(--white) !important;
   border-radius: 16px !important;
@@ -673,18 +674,24 @@ canvas {
   margin-top: clamp(0.5rem, 1vh, 1rem) !important;
   margin-bottom: clamp(0.5rem, 1vh, 1rem) !important;
 
-  /* LEFT ALIGN (final) */
-  margin-left: 0 !important;
-  margin-right: auto !important;
+  /* FINAL LEFT ALIGNMENT */
+  margin-left: 0 !important;      /* anchor to the left edge of the parent content box */
+  margin-right: auto !important;  /* consume remaining space on the right */
 
-  /* Optional nudge further left */
-  transform: translateX(-3%) !important;
+  /* If the parent is flex or grid, this forces left alignment */
+  align-self: flex-start !important;  /* flex parents */
+  justify-self: start !important;     /* grid parents */
 
   /* POSITIONING SAFEGUARDS */
   position: relative !important;
   left: 0 !important;
   right: 0 !important;
+
+  /* Remove any previous centering or nudging */
+  transform: none !important;  /* <— set to none; add translateX(-3%) if you still want a small left nudge */
 }
+
+
 
 
 .question-header {
