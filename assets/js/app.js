@@ -484,3 +484,34 @@ document.addEventListener('DOMContentLoaded', () => {
 window.loadQuestion = loadQuestion;
 window.resetGameState = resetGameState;
 window.gameState = gameState;
+
+// ===== FORCE QUESTION CARD TO THE LEFT =====
+function forceCardPositioning() {
+    const card = document.querySelector('.question-card');
+    if (card) {
+        card.style.setProperty('margin-left', '0.5vw', 'important');
+        card.style.setProperty('margin-right', '6.5vw', 'important');
+        console.log('✅ Card forced to left');
+    }
+}
+
+// Run when question is displayed
+const originalDisplayQuestion = window.displayQuestion;
+if (originalDisplayQuestion) {
+    window.displayQuestion = function(...args) {
+        const result = originalDisplayQuestion.apply(this, args);
+        setTimeout(forceCardPositioning, 100);
+        return result;
+    };
+}
+
+// Run on page load
+document.addEventListener('DOMContentLoaded', forceCardPositioning);
+
+// Watch for card appearing
+const observer = new MutationObserver(() => {
+    if (document.querySelector('.question-card')) {
+        forceCardPositioning();
+    }
+});
+observer.observe(document.body, { childList: true, subtree: true });
