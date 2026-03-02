@@ -663,17 +663,13 @@ canvas {
     overflow-y: auto;
     display: flex;
     flex-direction: column;
-    
-    /* AUTO-SCALING WIDTH - Works on ALL devices */
     width: clamp(300px, 93vw, 1400px) !important;
-    
-    /* PERFECT MATHEMATICAL CENTER - Auto-calculates equal margins */
-    width: clamp(300px, 93vw, 1400px) !important;
-    margin-left: 1vw !important;
-    margin-right: 6vw !important;
     margin-top: clamp(0.5rem, 1vh, 1rem) !important;
     margin-bottom: clamp(0.5rem, 1vh, 1rem) !important;
+    margin-left: 1.5vw !important;
+    margin-right: 5.5vw !important;
 }
+
 
 
 .question-header {
