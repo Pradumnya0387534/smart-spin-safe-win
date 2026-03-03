@@ -4,9 +4,9 @@
 // ===================================
 
 // Configuration
-const WHEEL_RADIUS = 200;  // Match backup radius
-const CENTER_CIRCLE_RADIUS = 30;
-const ARROW_LENGTH = 30;
+const WHEEL_RADIUS = 240;  // INCREASED: 200 → 240 (+20%) for bigger wheels
+const CENTER_CIRCLE_RADIUS = 38;  // INCREASED: 30 → 38 (proportional to wheel)
+const ARROW_LENGTH = 38;  // INCREASED: 30 → 38 (proportional to wheel)
 
 // NEW CATEGORIES from updated question bank
 const categories = [
@@ -138,7 +138,7 @@ function drawCategoryWheel() {
         ctx.fill();
         
         ctx.strokeStyle = '#ffffff';
-        ctx.lineWidth = 3;
+        ctx.lineWidth = 5;  // INCREASED: 4 → 5 (proportional to wheel)  // INCREASED: 3 → 4 (proportional to wheel)
         ctx.stroke();
         
        // Draw category name (instead of icon)
@@ -148,7 +148,7 @@ function drawCategoryWheel() {
     ctx.textAlign = 'center';
     ctx.textBaseline = 'middle';
     ctx.fillStyle = '#ffffff';  // White text
-    ctx.font = 'bold 12px Arial';  // Smaller font for text
+    ctx.font = 'bold 15px Arial';  // INCREASED: 12px → 15px (proportional to wheel)
 
     // Split long category names into 2 lines
     const words = category.split(' ');
@@ -182,7 +182,7 @@ function drawCategoryWheel() {
     ctx.stroke();
     
     // Draw "ABB" text in center (like backup)
-    ctx.font = 'bold 20px Arial';
+    ctx.font = 'bold 25px Arial';  // INCREASED: 20px → 25px (proportional to wheel)
     ctx.fillStyle = '#FF000F';
     ctx.textAlign = 'center';
     ctx.textBaseline = 'middle';
@@ -228,7 +228,7 @@ function drawQuestionWheel() {
         ctx.fill();
         
         ctx.strokeStyle = '#ffffff';
-        ctx.lineWidth = 3;
+        ctx.lineWidth = 4;  // INCREASED: 3 → 4 (proportional to wheel)
         ctx.stroke();
         
         // Draw question number (like backup)
@@ -237,7 +237,7 @@ function drawQuestionWheel() {
         ctx.rotate(startAngle + segmentAngle / 2);
         ctx.textAlign = 'center';
         ctx.textBaseline = 'middle';
-        ctx.font = 'bold 32px Arial';  // Match backup number size
+        ctx.font = 'bold 40px Arial';  // INCREASED: 32px → 40px (proportional to wheel)
         ctx.fillStyle = '#ffffff';
         ctx.fillText(i + 1, WHEEL_RADIUS * 0.65, 0);
         ctx.restore();
@@ -256,7 +256,7 @@ function drawQuestionWheel() {
     ctx.stroke();
     
     // Draw "ABB" text in center
-    ctx.font = 'bold 20px Arial';
+    ctx.font = 'bold 25px Arial';  // INCREASED: 20px → 25px (proportional to wheel)
     ctx.fillStyle = '#FF000F';
     ctx.textAlign = 'center';
     ctx.textBaseline = 'middle';
